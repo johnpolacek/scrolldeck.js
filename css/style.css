@@ -1,0 +1,51 @@
+body {
+	background: #fff;
+	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+/*----------------------------------------  HEADER  */
+
+#header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: #eee;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 15px 15px 10px;
+	font-size: 24px;
+}
+
+#nav {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	padding-left: 180px;
+}
+
+.nav-button {
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+}
+
+/*----------------------------------------  SLIDES  */
+
+.slide {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	padding: 110px 0 200px;
+	text-align: center;
+}
+
+.slide h1 {
+	font-size: 47px;
+	text-align: center;
+}
