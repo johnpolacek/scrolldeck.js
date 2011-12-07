@@ -2,68 +2,102 @@
 	scrollpresentation - jQuery plugin to create a vertically scrolling presentation deck 
 	by John Polacek (@johnpolacek)
 	
-	Based on jquery.scrollpresentation by Matt Johnston from DressRush - http://investors.dressrush.com/ 
+	Originally forked from jquery.pitchdeck by Matt Johnston from DressRush - http://investors.dressrush.com/ 
 	
 	Dual licensed under MIT and GPL.
 */
 
-(function($){
-    $.fn.extend({ 
-        
-		scrolldeck: function(options) {
-            
-			var defaults = {
-            	buttons: '.nav-button',
-                slides: '.slide',
-                duration: 600,
-                easing: 'easeInOutExpo'
-            }
-			var currSlide = 0;
-            var o =  $.extend(defaults, options);
-            return this.each(function() {
-                var slide = $(o.slides).eq(0);
-				
-				// Update 'current' nav button
-				$(o.slides).waypoint(function(e, dir) {
-					if (dir == 'up' && $(this).attr('id') != 'slide1') slide = $(this).prev();
-					else slide = $(this);
-					$(o.buttons).removeClass('current');
-					$(o.buttons+'[href=#'+slide.attr('id')+']').addClass('current');
+(function($) {
+    $.scrolldeck = function(options) {
+		
+		$.scrollTo(0,0);
+		
+		// PRIVATE VARS
+		var currIndex,
+			buttons,
+			slide,
+			slides,
+			sections,
+			i;
+		
+		var defaults = {
+			buttons: '.nav-button',
+			slides: '.slide',
+			duration: 600,
+			easing: 'easeInOutExpo'
+		};
+		
+		var plugin = this;
+		plugin.settings = {};
+			
+		var init = function() {
+			
+			plugin.settings = $.extend({}, defaults, options);
+			
+			buttons = $(plugin.settings.buttons);
+			slides = $(plugin.settings.slides);
+			currIndex = 0;
+			sections = [];
+			
+			for (i=0; i<buttons.length;i++) {
+				var slideIndex = $($(buttons[i]).attr('href')).index()-1;
+				sections.push(slideIndex);
+				console.log('slideIndex '+slideIndex);
+			}
+			
+			slides.waypoint(function(e, dir) {
+				var scrollIndex = $(this).index()-1;
+				if (dir == 'down' && scrollIndex != 0) scrollIndex --;
+				if (dir == 'up' && scrollIndex > 1) scrollIndex -= 2;
+				console.log('dir '+dir+' index '+scrollIndex);	
+				buttons.removeClass('current');
+				var currSection = -1;
+				for (i=0; i<sections.length;i++) {
+					if (scrollIndex >= sections[i]) {
+						currSection = i;
+					}
+				}	
+				buttons.eq(currSection).addClass('current');
+			});
+			
+			// Nav button click event
+			buttons.click(function(e) {
+				e.preventDefault();
+				slide = $($(this).attr('href'));
+				currIndex = slide.index();
+				$(window)._scrollable().stop();
+				$.scrollTo(slide, {
+					duration: plugin.settings.duration,
+					easing: plugin.settings.easing
 				});
-				
-				$(o.buttons).click(function() {
-					slide = $($(this).attr('href'));
+			});
+			
+			// Keyboard events
+			$(document).keydown(function(e){
+				if ((e.keyCode == 37) && currIndex !== 0) {
+					currIndex--;
+					slide = slides.eq(currIndex);
 					$(window)._scrollable().stop();
-					$.scrollTo(slide, {
-						duration: o.duration,
-						easing: o.easing
+					$(window).scrollTo(slide, {
+						duration: plugin.settings.duration,
+						easing: plugin.settings.easing
 					});
-					return false;
-				});
-				
-				// Set up keyboard control
-				$(document).keydown(function(e){
-					if ((e.keyCode == 37) && slide.attr('id') != 'slide1') { 
-						slide = slide.prev();
-						console.log(slide);
-						$(window)._scrollable().stop();
-						$(window).scrollTo(slide, {
-							duration: o.duration,
-							easing: o.easing
-						});
-					}
-					else if ((e.keyCode == 39 || e.keyCode == 32) && slide.attr('id') != 'slide11') { 
-						slide = slide.next();
-						console.log(slide);
-						$(window)._scrollable().stop();
-						$(window).scrollTo(slide, {
-							duration: o.duration,
-							easing: o.easing
-						});
-					}
-				});
-            });
-        }
-    });
+				}
+				else if ((e.keyCode == 39 || e.keyCode == 32) && currIndex != slides.length-1) { 
+					currIndex++;
+					slide = slides.eq(currIndex);
+					$(window)._scrollable().stop();
+					$(window).scrollTo(slide, {
+						duration: plugin.settings.duration,
+						easing: plugin.settings.easing
+					});
+				}
+			});
+		};
+		
+		
+		// INIT
+		init();
+    };
      
 })(jQuery);

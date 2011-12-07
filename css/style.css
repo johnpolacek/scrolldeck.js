@@ -3,6 +3,12 @@ body {
 	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+
 /*----------------------------------------  HEADER  */
 
 #header {
@@ -16,23 +22,29 @@ body {
 
 #header h1 {
 	margin: 0;
-	padding: 15px 15px 10px;
-	font-size: 24px;
+	padding: 10px 20px 10px;
+	font-size: 18px;
+	color: #999;
+	font-weight: normal;
 }
 
 #nav {
 	position: absolute;
-	top: 10px;
+	top: 4px;
 	right: 20px;
-	padding-left: 180px;
 }
 
 .nav-button {
 	float: left;
 	padding: 10px;
 	text-decoration: none;
-	color: #333;
-	font-size: 18px;
+	color: #999;
+	font-size: 16px;
+}
+
+.current, a.nav-button:hover {
+	font-weight: bold;
+	color: #666;
 }
 
 /*----------------------------------------  SLIDES  */

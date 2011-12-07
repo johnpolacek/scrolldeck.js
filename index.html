@@ -3,59 +3,136 @@
 <head>
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<title>scrolldeck.js</title>
+	<title>What The Heck Is Responsive Web Design?</title>
 	
 	<link rel="stylesheet" href="css/normalize.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	
-	<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="js/waypoints.min.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="js/jquery.scrolldeck.js"></script>
+	<script src="js/jquery-1.6.4.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.scrolldeck.js"></script>
 </head>
 <body>
 	<div id="header">
-		<h1>scrolldeck.js</h1>
+		<h1>What The Heck Is Responsive Web Design?</h1>
 		<div id="nav">
-			<a href="#slide1" class="nav-button current">Introduction</a>
-			<a href="#slide2" class="nav-button">How to Use</span></a>
-			<a href="#slide3" class="nav-button">Author</span></a>
-			<a href="#slide4" class="nav-button">Credits</span></a>
+			<a href="#what" class="nav-button current">What</a>
+			<a href="#why" class="nav-button">Why</span></a>
+			<a href="#where" class="nav-button">Where</span></a>
+			<a href="#when" class="nav-button">When</span></a>
+			<a href="#how" class="nav-button">How</span></a>
+			<a href="#who" class="nav-button">Who</span></a>
 		</div>
 	</div>
 
-<div class="slide" id="slide1">
-	<div class="container">
-		<h1>Introduction</h1>
-		<p>scrolldeck.js is a jQuery plugin for making presentation decks.
+	<div class="slide" id="what">
+		<h1>What The Heck Is Responsive Web Design?</h1>	
 	</div>
-</div>
-
-<div class="slide" id="slide2">
-	<h1>How to Use</h1>
-	<p></p>
-</div>
-
-<div class="slide" id="slide3">
-	<h1>Created by John Polacek</h1>
-	<p>...</p>
-</div>
-
-<div class="slide" id="slide4">
-	<h1>Credits</h1>
-	<p>jQuery Waypoints, scrollTo, Dress Rush...</p>
-</div>
-
-<script>
-  $(document).ready(function() {
-	  
-	  $(document).scrolldeck({
-			buttons: '.nav-button',
-			easing: 'easeInOutExpo'
-	  });
-	  
-  });
-</script>
+	
+	<div class="slide" id="what2">
+		<p><dfn>Responsive websites</dfn> <em>&ldquo;respond&rdquo;</em> to their environment <small>(primarily based on the width of the browser window)</small></p>
+	</div>
+	
+	<div class="slide" id="what3">
+		<h2>Adaptive vs. Responsive</h2>
+		<p>Multiple Fixed Width Designs vs. Fluid Grid System</p>
+		<h2>The Goldilocks Approach</h2>
+		<p>Fixed width for large and medium, fluid for small.</p>
+	</div>
+	
+	<div class="slide" id="why">
+		<h1>Why?</h1>
+		<p>Create websites that work across all screen sizes and devices.</p>
+	</div>
+	
+	<div class="slide" id="where">
+		<h1>Where Are Some Examples?</h1>
+		<p>Not just demos, design shops and vanity pages. <em>Real client work.</em></p>
+	</div>
+	
+	<div class="slide" id="where1">
+		<h2>The Boston Globe</h2>
+		<a href="http://www.bostonglobe.com">bostonglobe.com</a>
+		<ul>
+			<li>Largest scale deployment of Responsive Web Design</li>
+		</ul>
+	</div>
+	
+	<div class="slide" id="where2">
+		<h2>Illy Issimo</h2>
+		<a href="http://us.illyissimo.com">us.illyissimo.com</a>
+		<ul>
+			<li>Brand page for illy coffee espresso drinks</li>
+		</ul>
+	</div>
+	
+	<div class="slide" id="where2">
+		<h2>Clean Air Commute Challenge</h2>
+		<a href="http://clearairchallenge.com">clearairchallenge.com</a>
+		<ul>
+			<li>Contest promo site</li>
+		</ul>
+	</div>
+	
+	<div class="slide" id="where3">
+		<h2>Sasquatch Music Festival</h2>
+		<a href="http://us.illyissimo.com">http://sasquatchfestival.com</a>
+		<ul>
+			<li>Adaptive, not responsive.</li>
+		</ul>
+	</div>
+	
+	<div class="slide" id="when">
+		<h1>When Do We Use It?</h1>
+		<p>...</p>
+		<h2>Things to Consider</h2>
+		<h3>Time &amp; Money</h3>
+		<h3>Performance</h3>
+		... http://www.webdesignshock.com/responsive-design-problems/
+	</div>
+	
+	<div class="slide" id="how">
+		<h1>How?</h1>
+		<p>Stop Thinking in Pages. Start Thinking in Systems.<small>- Jeremy Keith</small></p>
+	</div>
+	
+	<div class="slide" id="how2">
+		<h2>Frameworks <small>(save time)</small> vs. Roll Your Own <small>(more control)</small></h2>
+	</div>
+	
+	<div class="slide" id="how3">
+		<h2>Best Practices</h2>
+		<ul>
+			<li>Evaluate Your Content</li>
+			<li>Start Small (Mobile First)</li>
+			<li>Forget Photoshop, Design in the Browser</li>
+			<li>Always Be Optimizing</li>
+		</ul>
+	</div>
+	
+	<div class="slide" id="who">
+		<h1>Who Is Leading The Way?</h1>
+	</div>
+	
+	<div class="slide" id="who1">
+		<h2>People</h2>
+	</div>
+	
+	<div class="slide" id="who2">
+		<h2>Resources</h2>
+	</div>
+	
+	<script>
+		$(document).ready(function() {
+			
+			var deck = new $.scrolldeck({
+				buttons: '.nav-button',
+				easing: 'easeInOutExpo'
+			});
+			
+		});
+	</script>
 
 </body></html>
