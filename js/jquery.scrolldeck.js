@@ -42,14 +42,12 @@
 			for (i=0; i<buttons.length;i++) {
 				var slideIndex = $($(buttons[i]).attr('href')).index()-1;
 				sections.push(slideIndex);
-				console.log('slideIndex '+slideIndex);
 			}
 			
 			slides.waypoint(function(e, dir) {
 				var scrollIndex = $(this).index()-1;
 				if (dir == 'down' && scrollIndex != 0) scrollIndex --;
 				if (dir == 'up' && scrollIndex > 1) scrollIndex -= 2;
-				console.log('dir '+dir+' index '+scrollIndex);	
 				buttons.removeClass('current');
 				var currSection = -1;
 				for (i=0; i<sections.length;i++) {
@@ -74,7 +72,6 @@
 			
 			// Keyboard events
 			$(document).keydown(function(e){
-				console.log(e.keyCode);
 				if ((e.keyCode == 37) && currIndex !== 0) {
 					currIndex--;
 					slide = slides.eq(currIndex);
