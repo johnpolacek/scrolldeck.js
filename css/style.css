@@ -35,6 +35,10 @@ body {
 	font-size: 18px;
 }
 
+.current, a.nav-button:hover {
+	font-weight: bold;
+}
+
 /*----------------------------------------  SLIDES  */
 
 .slide {
@@ -48,4 +52,8 @@ body {
 .slide h1 {
 	font-size: 47px;
 	text-align: center;
+}
+
+#credits {
+	padding-bottom:600px;
 }
