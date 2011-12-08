@@ -10,8 +10,6 @@
 (function($) {
     $.scrolldeck = function(options) {
 		
-		$.scrollTo(0,0);
-		
 		// PRIVATE VARS
 		var currIndex,
 			buttons,
@@ -32,6 +30,8 @@
 			
 		var init = function() {
 			
+			$('html, body').animate({ scrollTop: 0 });
+			
 			plugin.settings = $.extend({}, defaults, options);
 			
 			buttons = $(plugin.settings.buttons);
@@ -45,13 +45,13 @@
 			}
 			
 			slides.waypoint(function(e, dir) {
-				var scrollIndex = $(this).index()-1;
-				if (dir == 'down' && scrollIndex != 0) scrollIndex --;
-				if (dir == 'up' && scrollIndex > 1) scrollIndex -= 2;
+				currIndex = $(this).index()-1;
+				if (dir == 'down' && currIndex != 0) currIndex --;
+				if (dir == 'up' && currIndex > 1) currIndex -= 2;
 				buttons.removeClass('current');
 				var currSection = -1;
 				for (i=0; i<sections.length;i++) {
-					if (scrollIndex >= sections[i]) {
+					if (currIndex >= sections[i]) {
 						currSection = i;
 					}
 				}	
