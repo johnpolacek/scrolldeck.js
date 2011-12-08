@@ -1,6 +1,6 @@
 body {
 	background: #fff;
-	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+	font-family: 'Corben', Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 ul {
@@ -43,8 +43,7 @@ ul {
 }
 
 .current, a.nav-button:hover {
-	font-weight: bold;
-	color: #666;
+	color: #333;
 }
 
 /*----------------------------------------  SLIDES  */
