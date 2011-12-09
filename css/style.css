@@ -1,11 +1,23 @@
+html {
+	font-size: 10px;
+	background: white;
+}
+
 body {
 	background: #fff;
 	font-family: 'Corben', Helvetica, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 ul {
 	list-style: none;
 	padding: 0;
+}
+
+h1 {
+	font-size: 64px;
+	font-size: 6.4rem;
 }
 
 
@@ -23,40 +35,114 @@ ul {
 #header h1 {
 	margin: 0;
 	padding: 10px 20px 10px;
-	font-size: 18px;
+	padding: 1rem 2rem 1rem;
+	font-size: 16px;
+	font-size: 1.6rem;
 	color: #999;
 	font-weight: normal;
 }
 
 #nav {
 	position: absolute;
-	top: 4px;
+	top: 3px;
+	top: .3rem;
 	right: 20px;
+	right: 2rem;
 }
 
 .nav-button {
 	float: left;
 	padding: 10px;
+	padding: 1rem;
 	text-decoration: none;
 	color: #999;
 	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 .current, a.nav-button:hover {
 	color: #333;
 }
 
-/*----------------------------------------  SLIDES  */
+/*------------------------  SLIDES  */
 
 .slide {
 	position: relative;
-	margin: 0;
-	width: 100%;
-	padding: 110px 0 200px;
+	margin: 0 auto;
+	width: 90%;
+	padding: 11rem 0 20rem;
 	text-align: center;
 }
 
 .slide h1 {
-	font-size: 47px;
 	text-align: center;
+}
+
+/*------------------------  BASE-REM SIZING  */
+
+
+@media (min-width: 1520px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 1400px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media (max-width: 1280px) {
+	html {
+		font-size: 10px;
+	}
+}
+	
+@media (max-width: 1160px) {
+	html {
+		font-size: 9px;
+	}
+}
+	
+@media (max-width: 1040px) {
+	html {
+		font-size: 8px;
+	}
+}
+	
+@media (max-width: 920px) {
+	html {
+		font-size: 7px;
+	}
+}
+	
+@media (max-width: 800px) {
+	html {
+		font-size: 6px;
+	}
+}
+	
+@media (max-width: 680px) {
+	html {
+		font-size: 5px;
+	}
+}
+	
+@media (max-width: 560px) {
+	html {
+		font-size: 4px;
+	}
+}
+	
+@media (max-width: 440px) {
+	html {
+		font-size: 3px;
+	}
+}
+
+@media (max-width: 320px) {
+	html {
+		font-size: 3px;
+	}
 }
