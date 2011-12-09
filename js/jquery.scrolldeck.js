@@ -45,9 +45,11 @@
 			}
 			
 			slides.waypoint(function(e, dir) {
-				currIndex = $(this).index()-1;
-				if (dir == 'down' && currIndex != 0) currIndex --;
-				if (dir == 'up' && currIndex > 1) currIndex -= 2;
+				currIndex = slides.index(this);
+				if (dir == 'up' && currIndex > 1) {
+					currIndex --;
+				}
+				if (currIndex < 0) currIndex = 0;
 				buttons.removeClass('current');
 				var currSection = -1;
 				for (i=0; i<sections.length;i++) {
