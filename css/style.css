@@ -19,13 +19,30 @@ ul {
 h1 {
 	font-size: 64px;
 	font-size: 6.4rem;
+	padding: 0;
 }
 
 h2 {
+	font-size: 48px;
+	font-size: 4.8rem;
+}
+
+p, li {
+	font-weight: 400;
 	font-size: 36px;
 	font-size: 3.6rem;
 }
 
+a, a:visited {
+	font-weight: 400;
+	font-style: italic;
+	color: #666;
+}
+
+li {
+	padding: 4px 0;
+	padding: .4rem 0;
+}
 
 /*----------------------------------------  HEADER  */
 
@@ -80,16 +97,16 @@ h2 {
 	text-align: center;
 }
 
-#what {
+#what1 {
 	padding: 18rem 0 20rem;
 }
 
-#what h1 {
+#what1 h1 {
 	font-size: 48px;
 	font-size: 4.8rem;
 }
 
-#what strong {
+#what1 strong {
 	display: block;
 	font-size: 64px;
 	font-size: 6.4rem;
@@ -97,6 +114,48 @@ h2 {
 
 #what2 {
 	padding: 24rem 0 20rem;
+}
+
+#what2 strong {
+	display: block;
+	font-size: 64px;
+	font-size: 6.4rem;
+	font-style: italic;
+	position: relative;
+	top: 6px;
+	top: .6rem;
+	letter-spacing: 3px;
+	letter-spacing: .3rem;
+}
+
+#what3 h2 {
+	font-size: 36px;
+	font-size: 3.6rem;
+}
+
+#what3 strong {
+	display: block;
+	font-size: 64px;
+	font-size: 6.4rem;
+}
+
+#what3 small {
+	display: block;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 400;
+	font-style: italic;
+	padding-bottom: 24px;
+	padding-bottom: 2.4rem;
+}
+
+#what4 h2 {
+	font-size: 64px;
+	font-size: 6.4rem;
+}
+
+.where p, .where h2 {
+	margin: 0;
 }
 
 /*------------------------  BASE-REM SIZING  */
