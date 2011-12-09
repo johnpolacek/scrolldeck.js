@@ -6,8 +6,9 @@ html {
 body {
 	background: #fff;
 	font-family: 'Corben', Helvetica, "Helvetica Neue", Arial, sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 24px;
+	font-size: 2.4rem;
+	line-height: 1.4;
 }
 
 ul {
@@ -18,6 +19,11 @@ ul {
 h1 {
 	font-size: 64px;
 	font-size: 6.4rem;
+}
+
+h2 {
+	font-size: 36px;
+	font-size: 3.6rem;
 }
 
 
@@ -74,8 +80,23 @@ h1 {
 	text-align: center;
 }
 
-.slide h1 {
-	text-align: center;
+#what {
+	padding: 18rem 0 20rem;
+}
+
+#what h1 {
+	font-size: 48px;
+	font-size: 4.8rem;
+}
+
+#what strong {
+	display: block;
+	font-size: 64px;
+	font-size: 6.4rem;
+}
+
+#what2 {
+	padding: 24rem 0 20rem;
 }
 
 /*------------------------  BASE-REM SIZING  */
