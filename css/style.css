@@ -85,6 +85,7 @@ img {
 	color: #999;
 	font-size: 16px;
 	font-size: 1.6rem;
+	font-style: normal;
 }
 
 .current, a.nav-button:hover {
@@ -214,7 +215,22 @@ img {
 	font-size: 2rem;
 }
 
-#when1 ul, #when1 h2 {
+#when1 {
+	padding: 60px 0 200px;
+	padding: 6rem 0 20rem;
+}
+
+#when1 h1, #when1 h2 {
+	margin: 12px;
+	margin: 1.2rem;
+}
+
+#when1 h2 {
+	font-size: 36px;
+	font-size: 3.6rem; 
+}
+
+#when1 ul  {
 	margin: 0;
 }
 
@@ -284,6 +300,21 @@ img {
 	padding: .3rem;
 }
 
+#credits h3, #credits h4 {
+	margin: 2.4rem 0 .6rem;
+}
+
+#credits h4 {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+#credits p {
+	margin: 0;
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
 /*------------------------  IMAGES  */
 
 /* width % is width of img / 1280 px (target screen width)  */
@@ -302,6 +333,10 @@ img {
 	text-decoration: none;
 }
 
+.img-border {
+	border: solid 1px #ddd;
+}
+
 #img-responsive {
 	width: 50.47%;
 }
@@ -311,15 +346,15 @@ img {
 }
 
 #img-bg-s {
-	width: 11.09%;
+	width: 13.83%;
 }
 
 #img-bg-m {
-	width: 22.89%;
+	width: 28.59%;
 }
 
 #img-bg-l {
-	width: 37.03%;
+	width: 45.31%;
 }
 
 #img-illy-s {
@@ -330,6 +365,37 @@ img {
 	width: 46.09%;
 }
 
+#img-clean-s {
+	width: 15%;
+}
+
+#img-clean-m {
+	width: 31.01%;
+}
+
+#img-clean-l {
+	width: 40.08%;
+}
+
+#img-sas-s {
+	width: 16.95%;
+}
+
+#img-sas-l {
+	width: 48.44%;
+}
+
+#img-obama-s {
+	width: 12.66%;
+}
+
+#img-obama-m {
+	width: 30.39%;
+}
+
+#img-obama-l {
+	width: 36.8%;
+}
 
 /*------------------------  BASE-REM SIZING  */
 
