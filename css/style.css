@@ -44,6 +44,10 @@ li {
 	padding: .4rem 0;
 }
 
+img {
+	width: 100%;
+}
+
 /*----------------------------------------  HEADER  */
 
 #header {
@@ -210,11 +214,6 @@ li {
 	font-size: 2rem;
 }
 
-.where img {
-	padding: 12px 3px;
-	padding: 1.2rem .3rem;
-}
-
 #when1 ul, #when1 h2 {
 	margin: 0;
 }
@@ -285,6 +284,53 @@ li {
 	padding: .3rem;
 }
 
+/*------------------------  IMAGES  */
+
+/* width % is width of img / 1280 px (target screen width)  */
+
+.img-wrap {
+	margin: 0 auto;
+}
+
+.img-inline {
+	display: inline-block;
+	padding: 12px 3px;
+	padding: 1.2rem .3rem;
+}
+
+.img-link {
+	text-decoration: none;
+}
+
+#img-responsive {
+	width: 50.47%;
+}
+
+#img-devices {
+	width: 67.03%;
+}
+
+#img-bg-s {
+	width: 11.09%;
+}
+
+#img-bg-m {
+	width: 22.89%;
+}
+
+#img-bg-l {
+	width: 37.03%;
+}
+
+#img-illy-s {
+	width: 15%;
+}
+
+#img-illy-l {
+	width: 46.09%;
+}
+
+
 /*------------------------  BASE-REM SIZING  */
 
 
@@ -300,6 +346,7 @@ li {
 	}
 }
 
+/* target screen width  */
 @media (max-width: 1280px) {
 	html {
 		font-size: 10px;
