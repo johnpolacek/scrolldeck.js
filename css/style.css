@@ -31,6 +31,10 @@ small {
 	text-shadow: 0 1px 0 #fff;
 }
 
+.download {
+	padding-left: 15px;
+}
+
 .pro-tip {
 	display: block;
 	padding: 20px;
@@ -66,7 +70,7 @@ blockquote {
 .nav-button {
 	padding: 10px;
 	text-decoration: none;
-	color: #ddd;
+	color: #ccc;
 	font-size: 20px;
 	text-shadow: 0 -1px 1px #000;
 	text-transform: uppercase;
