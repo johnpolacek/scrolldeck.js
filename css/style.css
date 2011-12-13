@@ -2,12 +2,14 @@ body {
 	background: #fff;
 	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 	font-size: 30px;
+	font-size: 3rem;
 	text-align: center;
 	background-color: #ccc;
 }
 
 h1 {
 	font-size: 180px;
+	font-size: 18rem;
 	margin: 0;
 	text-shadow: 0 2px 1px #fff;
 }
@@ -15,6 +17,7 @@ h1 {
 p {
 	width: 80%;
 	margin: 20px auto;
+	margin: 2rem auto;
 	text-shadow: 0 1px 1px #fff;
 }
 
@@ -28,50 +31,59 @@ a, a:visited {
 small {
 	font-style: italic;
 	font-size: 20px;
+	font-size: 2rem;
 	text-shadow: 0 1px 0 #fff;
 }
 
 .download {
 	padding-left: 15px;
+	padding-left: 1.5rem;
 }
 
 .pro-tip {
 	display: block;
 	padding: 20px;
+	padding: 2rem;
 	text-shadow: 0 1px 0 #fff;
 }
 
 pre {
 	font-size: 18px;
+	font-size: 1.8rem;
 }
 
 blockquote {
 	text-align: left;
 	width: 50%;
 	margin: 10px auto;
+	margin: 1rem auto;
 	background: #eee;
 	border: solid 2px #bbb;
 	padding: 0 40px;
+	padding: 0 rem;
 }
 
 /*----------------------------------------  HEADER  */
 
 #header {
 	width: 100%;
-	height: 40px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
 	background: #555;
 	border-bottom: solid 3px #444;
+	padding: 5px;
+	padding: .5rem;
 }
 
 .nav-button {
 	padding: 10px;
+	padding: 1rem;
 	text-decoration: none;
 	color: #ccc;
 	font-size: 20px;
+	font-size: 2rem;
 	text-shadow: 0 -1px 1px #000;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -89,16 +101,90 @@ blockquote {
 	margin: 0;
 	width: 100%;
 	padding: 180px 0 160px;
+	padding: 18rem 0 16rem;
 }
 
 #examples {
 	padding-top: 150px;
+	padding-top: 15rem;
 }
 
 #examples h1 {
 	padding-bottom: 20px;
+	padding-bottom: 2rem;
 }
 
 #credits {
 	padding-top: 100px;
+	padding-top: 10rem;
+}
+
+/*------------------------  BASE-REM SIZING  */
+
+
+@media (min-width: 1520px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 1400px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+/* target screen width  */
+@media (max-width: 1280px) {
+	html {
+		font-size: 10px;
+	}
+}
+	
+@media (max-width: 1160px) {
+	html {
+		font-size: 9px;
+	}
+}
+	
+@media (max-width: 1040px) {
+	html {
+		font-size: 8px;
+	}
+}
+	
+@media (max-width: 920px) {
+	html {
+		font-size: 7px;
+	}
+}
+	
+@media (max-width: 800px) {
+	html {
+		font-size: 6px;
+	}
+}
+	
+@media (max-width: 680px) {
+	html {
+		font-size: 5px;
+	}
+}
+	
+@media (max-width: 560px) {
+	html {
+		font-size: 4px;
+	}
+}
+	
+@media (max-width: 440px) {
+	html {
+		font-size: 3px;
+	}
+}
+
+@media (max-width: 320px) {
+	html {
+		font-size: 3px;
+	}
 }
