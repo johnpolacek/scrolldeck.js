@@ -2,34 +2,39 @@ body {
 	background: #fff;
 	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 	font-size: 30px;
+	text-align: center;
+	background-color: #ccc;
 }
 
 h1 {
 	font-size: 180px;
 	margin: 0;
+	text-shadow: 0 2px 1px #fff;
 }
 
 p {
 	width: 80%;
 	margin: 20px auto;
+	text-shadow: 0 1px 1px #fff;
 }
 
 a, a:visited {
-	color: #666;
-}
-
-a:hover {
-	color: #333;
+	color: #444;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: none;
 }
 
 small {
 	font-style: italic;
 	font-size: 20px;
+	text-shadow: 0 1px 0 #fff;
 }
 
 .pro-tip {
 	display: block;
-	padding: 20px;	
+	padding: 20px;
+	text-shadow: 0 1px 0 #fff;
 }
 
 pre {
@@ -40,8 +45,8 @@ blockquote {
 	text-align: left;
 	width: 50%;
 	margin: 10px auto;
-	background: #fafafa;
-	border: solid 1px #eee;
+	background: #eee;
+	border: solid 2px #bbb;
 	padding: 0 40px;
 }
 
@@ -49,36 +54,28 @@ blockquote {
 
 #header {
 	width: 100%;
+	height: 40px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
-	background: #eee;
-}
-
-#header h1 {
-	margin: 0;
-	padding: 15px 15px 10px;
-	font-size: 24px;
-}
-
-#nav {
-	position: absolute;
-	top: 10px;
-	right: 15px;
-	padding-left: 180px;
+	background: #555;
+	border-bottom: solid 3px #444;
 }
 
 .nav-button {
-	float: left;
 	padding: 10px;
 	text-decoration: none;
-	color: #333;
-	font-size: 18px;
+	color: #ddd;
+	font-size: 20px;
+	text-shadow: 0 -1px 1px #000;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: normal;
 }
 
 .current, a.nav-button:hover {
-	font-weight: bold;
+	color: #fff;
 }
 
 /*----------------------------------------  SLIDES  */
@@ -88,7 +85,6 @@ blockquote {
 	margin: 0;
 	width: 100%;
 	padding: 180px 0 160px;
-	text-align: center;
 }
 
 #examples {
