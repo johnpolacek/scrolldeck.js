@@ -182,42 +182,47 @@ img {
 	padding: 0;
 }
 
-#where1 {
+#who1 {
 	padding: 200px 0 240px;
 	padding: 20rem 0 24rem;
 }
 
-#where1 h1 {
+#who1 h1 {
 	margin: 0;
 }
 
-#where1 p {
+#who1 p {
 	font-size: 30px;
 	font-size: 3rem;
 }
 
-.where {
+.who {
 	padding: 150px 0 200px;
 	padding: 15rem 0 20rem;
 }
 
-.where p, .where h2 {
+.who p, .who h2 {
 	margin: 0;
 }
 
-.where h2 {
+.who h2 {
 	font-size: 30px;
 	font-size: 3rem;
 }
 
-.where p, .where a {
+.who p, .who a {
 	font-size: 20px;
 	font-size: 2rem;
 }
 
+#who7 {
+	padding: 270px 0 270px;
+	padding: 27rem 0 27rem;
+}
+
 #when1 {
-	padding: 60px 0 200px;
-	padding: 6rem 0 20rem;
+	padding: 80px 0 200px;
+	padding: 8rem 0 20rem;
 }
 
 #when1 h1, #when1 h2 {
@@ -262,40 +267,44 @@ img {
 	padding-bottom: 2.4rem;
 }
 
-.who h2 {
-	font-size: 60px;
-	font-size: 6rem;
+#how3 {
+	padding-top: 5rem;
+}
+
+.where h2 {
+	font-size: 30px;
+	font-size: 3rem;
 	margin: 0;
 }
 
-.who h3 {
-	margin: 4.8rem 0 0;
-	font-size: 36px;
-	font-size: 3.6rem;
-}
-
-.who h4 {
-	margin: 4.8rem 0 0;
-}
-
-.who p {
+.where h3, .where p, .where a {
 	margin: 0;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+.where-block, .where-block-framework {
+	vertical-align: top;
+	display: inline-block;
+	width: 40%;
+	padding: 20px 0;
+	padding: 2rem 0;
+}
+
+#where1 {
+	padding: 150px 0 200px;
+	padding: 15rem 0 20rem;
+}
+
+#where2 {
+	padding: 60px 0 200px;
+	padding: 6rem 0 20rem;
+}
+
+#where4 a {
+	display: block;
 	font-size: 24px;
 	font-size: 2.4rem;
-}
-
-#who4 a {
-	display: block;
-	font-size: 48px;
-	font-size: 4.8rem;
-	padding: 6px;
-	padding: .6rem;
-}
-
-#who5 a {
-	display: block;
-	font-size: 36px;
-	font-size: 3.6rem;
 	padding: 3px;
 	padding: .3rem;
 }
@@ -395,6 +404,16 @@ img {
 
 #img-obama-l {
 	width: 36.8%;
+}
+
+/* width % is width of img / (40% of 1280 px) (containers are 40% of target screen width)  */
+
+.where-block .img-wrap {
+	width: 22.66%;
+}
+
+.where-block-framework .img-wrap {
+	width: 86.33%;
 }
 
 /*------------------------  BASE-REM SIZING  */
