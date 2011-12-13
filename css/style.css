@@ -108,11 +108,6 @@ img {
 	padding: 15rem 0 20rem;
 }
 
-#what1 h1 {
-	font-size: 60px;
-	font-size: 6rem;
-}
-
 #what2 {
 	padding: 150px 0 200px;
 	padding: 15rem 0 20rem;
@@ -169,15 +164,26 @@ img {
 }
 
 #why1 {
-	padding: 3rem 0 6rem;
+	padding: 100px 0 200px;
+	padding: 10rem 0 20rem;
 }
 
-#why1 h1 {
+#why1 small {
+	display: block;
+	width: 80%;
+	text-align: right;
+	padding-top: 10px;
+	padding-top: 1rem;
+	font-style: italic;
+	color: #999;
+}
+
+#why2 h1 {
 	margin: 0;
 	padding: 3rem 0;
 }
 
-#why1 p {
+#why2 p {
 	margin: 0;
 	padding: 0;
 }
@@ -241,7 +247,12 @@ img {
 
 #how1 small {
 	display: block;
+	color: #999;
 	font-style: italic;
+	width: 82%;
+	text-align: right;
+	padding-top: 10px;
+	padding-top: 1rem;
 }
 
 #how2 h2 {
@@ -283,7 +294,7 @@ img {
 	font-size: 2rem;
 }
 
-.where-block, .where-block-framework {
+.where-block {
 	vertical-align: top;
 	display: inline-block;
 	width: 40%;
@@ -299,6 +310,30 @@ img {
 #where2 {
 	padding: 60px 0 200px;
 	padding: 6rem 0 20rem;
+}
+
+#where3 {
+	padding: 60px 0 200px;
+	padding: 6rem 0 20rem;
+}
+
+#where3 a {
+	font-size: 36px;
+	font-size: 3.6rem;
+}
+
+#where3 .where-block {
+	vertical-align: top;
+	display: inline-block;
+	width: 40%;
+	padding: 24px 0 6px;
+	padding: 2.4rem 0 .6rem;
+	line-height: 1.2;
+}
+
+#where3 .where-block a {
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 #where4 a {
@@ -412,7 +447,7 @@ img {
 	width: 22.66%;
 }
 
-.where-block-framework .img-wrap {
+#where3 .where-block .img-wrap {
 	width: 86.33%;
 }
 
