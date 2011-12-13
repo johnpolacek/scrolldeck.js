@@ -18,46 +18,75 @@
 	<div id="header">
 		<h1>scrolldeck.js</h1>
 		<div id="nav">
-			<a href="#intro" class="nav-button current">Introduction</a>
 			<a href="#howtouse" class="nav-button">How to Use</span></a>
-			<a href="#author" class="nav-button">Author</span></a>
+			<a href="#examples" class="nav-button">Examples</span></a>
 			<a href="#credits" class="nav-button">Credits</span></a>
 		</div>
 	</div>
 
-<div class="slide" id="intro">
-	<div class="container">
-		<h1>Introduction</h1>
-		<p>scrolldeck.js is a jQuery plugin for making presentation decks.
+	<div class="slide">
+		<div class="container" id="intro">
+			<h1>scrolldeck</h1>
+			<p>a jQuery plugin for making vertically scrolling presentation decks</p>
+		</div>
 	</div>
-</div>
+	
+	<div class="slide" id="howtouse">
+		<h1>How to Use</h1>
+		<p>Build a web page with each slide as a div.
+			<small class="pro-tip">Pro-Tip: <a href="http://blog.responsivenews.co.uk/post/13925578846/fluid-grids-orientation-resolution-independence">Use rem&rsquo;s to make content scale to the browser window size.</a></small>
+		</p>
+	</div>
 
-<div class="slide" id="howtouse">
-	<h1>How to Use</h1>
-	<p></p>
-</div>
+	<div class="slide">
+		<p>Create section navigation by linking to slide id&rsquo;s <small>(optional)</small></p>
+		<p>After linking all the required scripts (jquery, waypoints, scrollto, easing &amp; scrolldeck), create the slide deck on document ready event.</p>
+		<p><blockquote><pre>
+$(document).ready(function() {
+  var deck = new $.scrolldeck();
+});</pre></blockquote></p>
+	</div>
 
-<div class="slide" id="author">
-	<h1>Created by John Polacek</h1>
-	<p><a href="http://johnpolacek.github.com">johnpolacek.github.com</a></p>
-	<p><a href="http://johnpolacek.com">johnpolacek.com</a></p>
-	<p><a href="http://twitter.com/johnpolacek">@johnpolacek</a></p>
-</div>
-
-<div class="slide" id="credits">
-	<h1>Credits</h1>
-	<p>jQuery Waypoints, scrollTo, Dress Rush...</p>
-</div>
-
-<script>
-  $(document).ready(function() {
-	  
-		var deck = new $.scrolldeck({
-			buttons: '.nav-button',
-			easing: 'easeInOutExpo'
-		});
-	  
+	<div class="slide">
+		<p>You can configure the settings as follows<br /><small>(example has the default config values assigned)</small></p>
+		<p><blockquote><pre>
+$(document).ready(function() {
+  var deck = new $.scrolldeck({
+    buttons: '.nav-button',
+    slides: '.slide',
+    duration: 600,
+    easing: 'easeInOutExpo'
   });
-</script>
+});</pre></blockquote></p>
+	</div>
+	
+	<div class="slide" id="examples">
+		<div class="container">
+			<h1>Examples</h1>
+			<p><a href="http://scrolldeck.com/responsive">What The Heck Is Responsive Web Design</a></p>
+		</div>
+	</div>
+	
+	<div class="slide" id="credits">
+		<h1>Credits</h1>
+		<p>scrolldeck.js created by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
+		<p>Inspired by
+			<a href="http://dressrush.com/blog/post/12506021124/dressrush-online-pitch-deck">Dress Rush Online Pitch Deck</a>
+			and <a href="http://imakewebthings.github.com/deck.js/">deck.js</a>
+		</p>
+		<p><a href="http://imakewebthings.github.com/jquery-waypoints/">jQuery Waypoints</a> by <a href="http://imakewebthings.com">Caleb Troughton</a></p>
+		<p><a href="http://demos.flesler.com/jquery/scrollTo/">jQuery ScrollTo</a> by <a href="https://twitter.com/#!/flesler">Ariel Flesler</a></p>
+	</div>
+	
+	<script>
+	  $(document).ready(function() {
+		  
+			var deck = new $.scrolldeck({
+				buttons: '.nav-button',
+				easing: 'easeInOutExpo'
+			});
+		  
+	  });
+	</script>
 
 </body></html>

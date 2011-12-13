@@ -45,19 +45,27 @@
 			}
 			
 			slides.waypoint(function(e, dir) {
+				// get current slide
 				currIndex = slides.index(this);
 				if (dir == 'up' && currIndex > 1) {
 					currIndex --;
 				}
-				if (currIndex < 0) currIndex = 0;
-				buttons.removeClass('current');
-				var currSection = -1;
-				for (i=0; i<sections.length;i++) {
-					if (currIndex >= sections[i]) {
-						currSection = i;
+				if (currIndex < 0) {
+					currIndex = 0;
+				}
+				// update nav
+				if (buttons) {
+					buttons.removeClass('current');
+					var currSection = -1;
+					for (i=0; i<sections.length;i++) {
+						if (currIndex >= sections[i]) {
+							currSection = i;
+						}
 					}
-				}	
-				buttons.eq(currSection).addClass('current');
+					if (currSection != -1) {
+						buttons.eq(currSection).addClass('current');	
+					}
+				}
 			});
 			
 			// Nav button click event
@@ -74,6 +82,7 @@
 			
 			// Keyboard events
 			$(document).keydown(function(e){
+				// left arrow = scroll to prev slide
 				if ((e.keyCode == 37) && currIndex !== 0) {
 					currIndex--;
 					slide = slides.eq(currIndex);
@@ -83,6 +92,7 @@
 						easing: plugin.settings.easing
 					});
 				}
+				// right arrow arrow = scroll to prev slide
 				else if ((e.keyCode == 39 || e.keyCode == 32) && currIndex != slides.length-1) { 
 					currIndex++;
 					slide = slides.eq(currIndex);

@@ -1,6 +1,48 @@
 body {
 	background: #fff;
 	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+	font-size: 30px;
+}
+
+h1 {
+	font-size: 180px;
+	margin: 0;
+}
+
+p {
+	width: 80%;
+	margin: 20px auto;
+}
+
+a, a:visited {
+	color: #666;
+}
+
+a:hover {
+	color: #333;
+}
+
+small {
+	font-style: italic;
+	font-size: 20px;
+}
+
+.pro-tip {
+	display: block;
+	padding: 20px;	
+}
+
+pre {
+	font-size: 18px;
+}
+
+blockquote {
+	text-align: left;
+	width: 50%;
+	margin: 10px auto;
+	background: #fafafa;
+	border: solid 1px #eee;
+	padding: 0 40px;
 }
 
 /*----------------------------------------  HEADER  */
@@ -23,7 +65,7 @@ body {
 #nav {
 	position: absolute;
 	top: 10px;
-	right: 20px;
+	right: 15px;
 	padding-left: 180px;
 }
 
@@ -45,15 +87,18 @@ body {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	padding: 110px 0 200px;
+	padding: 180px 0 160px;
 	text-align: center;
 }
 
-.slide h1 {
-	font-size: 47px;
-	text-align: center;
+#examples {
+	padding-top: 150px;
+}
+
+#examples h1 {
+	padding-bottom: 20px;
 }
 
 #credits {
-	padding-bottom:600px;
+	padding-top: 100px;
 }
