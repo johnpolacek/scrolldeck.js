@@ -40,8 +40,9 @@
 			sections = [];
 			
 			for (i=0; i<buttons.length;i++) {
-				var slideIndex = $($(buttons[i]).attr('href')).index()-1;
+				var slideIndex = slides.index($($(buttons[i]).attr('href')));
 				sections.push(slideIndex);
+				console.log(slideIndex);
 			}
 			
 			slides.waypoint(function(e, dir) {
@@ -65,6 +66,7 @@
 					if (currSection != -1) {
 						buttons.eq(currSection).addClass('current');	
 					}
+					console.log('currSection'+currSection);
 				}
 			});
 			
