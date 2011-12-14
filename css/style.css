@@ -63,6 +63,12 @@ blockquote {
 	padding: 0 rem;
 }
 
+code {
+	font-style: normal;
+	padding-left: 5px;
+	padding-left: .5rem;
+}
+
 /*----------------------------------------  HEADER  */
 
 #header {

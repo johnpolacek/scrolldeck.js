@@ -1,8 +1,6 @@
 /*
-	scrollpresentation - jQuery plugin to create a vertically scrolling presentation deck 
+	scrolldeck - jQuery plugin to create a vertically scrolling presentation deck 
 	by John Polacek (@johnpolacek)
-	
-	Originally forked from jquery.pitchdeck by Matt Johnston from DressRush - http://investors.dressrush.com/ 
 	
 	Dual licensed under MIT and GPL.
 */
@@ -13,7 +11,6 @@
 		// PRIVATE VARS
 		var currIndex,
 			buttons,
-			slide,
 			slides,
 			sections,
 			i;
@@ -43,7 +40,6 @@
 			for (i=0; i<buttons.length;i++) {
 				var slideIndex = slides.index($($(buttons[i]).attr('href')));
 				sections.push(slideIndex);
-				console.log(slideIndex);
 			}
 			
 			slides.waypoint(function(e, dir) {
@@ -55,6 +51,7 @@
 				if (currIndex < 0) {
 					currIndex = 0;
 				}
+				console.log('waypoint '+currIndex);
 				// update nav
 				if (buttons) {
 					buttons.removeClass('current');
@@ -68,12 +65,12 @@
 						buttons.eq(currSection).addClass('current');	
 					}
 				}
-			});
+			}, {offset:-plugin.settings.offset});
 			
 			// Nav button click event
 			buttons.click(function(e) {
 				e.preventDefault();
-				slide = $($(this).attr('href'));
+				var slide = $($(this).attr('href'));
 				currIndex = slide.index();
 				scrollToSlide(slide);
 			});
@@ -83,14 +80,17 @@
 				// left arrow = scroll to prev slide
 				if ((e.keyCode == 37) && currIndex !== 0) {
 					currIndex--;
-					slide = slides.eq(currIndex);
-					scrollToSlide(slide);
+					scrollToSlide(slides.eq(currIndex));
+					console.log('scrollTo '+currIndex);
 				}
 				// right arrow arrow = scroll to prev slide
 				else if ((e.keyCode == 39 || e.keyCode == 32) && currIndex != slides.length-1) { 
 					currIndex++;
-					slide = slides.eq(currIndex);
-					scrollToSlide(slide);
+					if (slides.eq(currIndex).height() < $(window).height() && currIndex != slides.length-1) {
+						//currIndex++;
+					}
+					scrollToSlide(slides.eq(currIndex));
+					console.log('scrollTo '+currIndex);
 				}
 			});
 		};
