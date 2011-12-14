@@ -22,7 +22,8 @@
 			buttons: '.nav-button',
 			slides: '.slide',
 			duration: 600,
-			easing: 'easeInOutExpo'
+			easing: 'easeInOutExpo',
+			offset: 0
 		};
 		
 		var plugin = this;
@@ -66,7 +67,6 @@
 					if (currSection != -1) {
 						buttons.eq(currSection).addClass('current');	
 					}
-					console.log('currSection'+currSection);
 				}
 			});
 			
@@ -75,11 +75,7 @@
 				e.preventDefault();
 				slide = $($(this).attr('href'));
 				currIndex = slide.index();
-				$(window)._scrollable().stop();
-				$.scrollTo(slide, {
-					duration: plugin.settings.duration,
-					easing: plugin.settings.easing
-				});
+				scrollToSlide(slide);
 			});
 			
 			// Keyboard events
@@ -88,24 +84,25 @@
 				if ((e.keyCode == 37) && currIndex !== 0) {
 					currIndex--;
 					slide = slides.eq(currIndex);
-					$(window)._scrollable().stop();
-					$(window).scrollTo(slide, {
-						duration: plugin.settings.duration,
-						easing: plugin.settings.easing
-					});
+					scrollToSlide(slide);
 				}
 				// right arrow arrow = scroll to prev slide
 				else if ((e.keyCode == 39 || e.keyCode == 32) && currIndex != slides.length-1) { 
 					currIndex++;
 					slide = slides.eq(currIndex);
-					$(window)._scrollable().stop();
-					$(window).scrollTo(slide, {
-						duration: plugin.settings.duration,
-						easing: plugin.settings.easing
-					});
+					scrollToSlide(slide);
 				}
 			});
 		};
+		
+		function scrollToSlide(slide) {
+			$(window)._scrollable().stop();
+			$(window).scrollTo(slide, {
+				duration: plugin.settings.duration,
+				easing: plugin.settings.easing,
+				offset: plugin.settings.offset
+			});
+		}
 		
 		
 		// INIT

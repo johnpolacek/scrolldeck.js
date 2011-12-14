@@ -1,0 +1,136 @@
+html {
+	font-size: 10px;
+	background: #fff;
+}
+
+img {
+	width: 100%;
+	display: block;
+	margin: 0;
+}
+
+#header {
+	font-family: Impact, "Arial Black", sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: #242444;
+}
+
+#header h1 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 36px;
+	font-size: 3.6rem;
+	padding-left: 5px;
+	padding-left: .5rem;
+}
+
+#nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.nav-button {
+	float: left;
+	padding: 0 5px;
+	padding: 0 .5rem;
+	text-decoration: none;
+	font-size: 36px;
+	font-size: 3.6rem;
+}
+
+.design {
+	color: #be6257;
+}
+
+.aliens {
+	color: #0c8abc;
+}
+
+.beer {
+	color: #e9cf22;
+}
+
+.electricity {
+	color: #a49786;
+}
+
+.house {
+	color: #019245;
+}
+
+/*------------------------  BASE-REM SIZING  */
+
+
+@media (min-width: 1520px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 1400px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+/* target screen width  */
+@media (max-width: 1280px) {
+	html {
+		font-size: 10px;
+	}
+}
+	
+@media (max-width: 1160px) {
+	html {
+		font-size: 9px;
+	}
+}
+	
+@media (max-width: 1040px) {
+	html {
+		font-size: 8px;
+	}
+}
+	
+@media (max-width: 920px) {
+	html {
+		font-size: 7px;
+	}
+}
+	
+@media (max-width: 800px) {
+	html {
+		font-size: 6px;
+	}
+}
+	
+@media (max-width: 680px) {
+	html {
+		font-size: 5px;
+	}
+}
+	
+@media (max-width: 560px) {
+	html {
+		font-size: 4px;
+	}
+}
+	
+@media (max-width: 440px) {
+	html {
+		font-size: 3px;
+	}
+}
+
+@media (max-width: 320px) {
+	html {
+		font-size: 3px;
+	}
+}
