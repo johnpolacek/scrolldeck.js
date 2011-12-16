@@ -106,13 +106,23 @@ code {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	padding: 180px 0 160px;
-	padding: 18rem 0 16rem;
+	padding: 120px 0 160px;
+	padding: 12rem 0 16rem;
 }
 
-#examples {
-	padding-top: 150px;
-	padding-top: 15rem;
+#title {
+	line-height: .8;
+}
+
+#author {
+	width: 70%;
+	font-size: 20px;
+	font-size: 2rem;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-bottom: 2rem;
+	text-align: right;
+	font-style: italic;
 }
 
 #examples h1 {
@@ -121,8 +131,8 @@ code {
 }
 
 #credits {
-	padding-top: 100px;
-	padding-top: 10rem;
+	padding-top: 60px;
+	padding-top: 6rem;
 }
 
 /*------------------------  BASE-REM SIZING  */
