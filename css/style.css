@@ -100,6 +100,12 @@ code {
 	color: #fff;
 }
 
+#resize-graphic {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
 /*----------------------------------------  SLIDES  */
 
 .slide {
