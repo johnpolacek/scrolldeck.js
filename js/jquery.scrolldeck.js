@@ -56,7 +56,6 @@
 					buttons.removeClass('current');
 					var currSection = -1;
 					for (i=0; i<sections.length;i++) {
-						console.log(currIndex+' '+sections[i])
 						if (currIndex >= sections[i]) {
 							currSection = i;
 						}
