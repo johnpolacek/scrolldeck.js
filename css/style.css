@@ -60,7 +60,7 @@ blockquote {
 	background: #eee;
 	border: solid 2px #bbb;
 	padding: 0 40px;
-	padding: 0 rem;
+	padding: 0 4rem;
 }
 
 code {
@@ -112,8 +112,9 @@ code {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	padding: 120px 0 160px;
-	padding: 12rem 0 16rem;
+	padding: 150px 0;
+	padding: 15rem 0;
+	height: 80rem;
 }
 
 #title {
@@ -137,8 +138,8 @@ code {
 }
 
 #credits {
-	padding-top: 60px;
-	padding-top: 6rem;
+	padding-top: 80px;
+	padding-top: 8rem;
 }
 
 /*------------------------  BASE-REM SIZING  */

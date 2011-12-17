@@ -1,5 +1,5 @@
 /*
-	scrolldeck - jQuery plugin to create a vertically scrolling presentation deck 
+	scrolldeck - jQuery scrolldeck to create a vertically scrolling presentation deck 
 	by John Polacek (@johnpolacek)
 	
 	Dual licensed under MIT and GPL.
@@ -23,17 +23,17 @@
 			offset: 0
 		};
 		
-		var plugin = this;
-		plugin.settings = {};
+		var scrolldeck = this;
+		scrolldeck.settings = {};
 			
 		var init = function() {
 			
 			$('html, body').animate({ scrollTop: 0 });
 			
-			plugin.settings = $.extend({}, defaults, options);
+			scrolldeck.settings = $.extend({}, defaults, options);
 			
-			buttons = $(plugin.settings.buttons);
-			slides = $(plugin.settings.slides);
+			buttons = $(scrolldeck.settings.buttons);
+			slides = $(scrolldeck.settings.slides);
 			currIndex = 0;
 			sections = [];
 			
@@ -56,6 +56,7 @@
 					buttons.removeClass('current');
 					var currSection = -1;
 					for (i=0; i<sections.length;i++) {
+						console.log(currIndex+' '+sections[i])
 						if (currIndex >= sections[i]) {
 							currSection = i;
 						}
@@ -64,7 +65,7 @@
 						buttons.eq(currSection).addClass('current');	
 					}
 				}
-			}, {offset:-plugin.settings.offset});
+			}, {offset:-scrolldeck.settings.offset});
 			
 			// Nav button click event
 			buttons.click(function(e) {
@@ -92,9 +93,9 @@
 		function scrollToSlide(slide) {
 			$(window)._scrollable().stop();
 			$(window).scrollTo(slide, {
-				duration: plugin.settings.duration,
-				easing: plugin.settings.easing,
-				offset: plugin.settings.offset
+				duration: scrolldeck.settings.duration,
+				easing: scrolldeck.settings.easing,
+				offset: scrolldeck.settings.offset
 			});
 		}
 		
