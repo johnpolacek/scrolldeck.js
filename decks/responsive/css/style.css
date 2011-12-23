@@ -95,8 +95,10 @@ img {
 
 .slide {
 	position: relative;
-	margin: 0 auto;
-	width: 90%;
+	margin: 0;
+	width: 100%;
+	height: 500px;
+	height: 50rem;
 	padding: 100px 0 200px;
 	padding: 10rem 0 20rem;
 	text-align: center;
