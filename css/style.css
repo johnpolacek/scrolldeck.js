@@ -19,6 +19,7 @@ p {
 	margin: 20px auto;
 	margin: 2rem auto;
 	text-shadow: 0 1px 1px #fff;
+	line-height: 1.2;
 }
 
 a, a:visited {
