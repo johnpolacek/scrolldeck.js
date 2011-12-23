@@ -37,13 +37,15 @@
 			slides = $(scrolldeck.settings.slides);
 			currIndex = 0;
 			sections = [];
-			controller = $.scrollorama({blocks:slides});
+			controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
 			
+			// if there are nav buttons, create array of section header slide indexes
 			for (i=0; i<buttons.length;i++) {
 				var slideIndex = slides.index($($(buttons[i]).attr('href')));
 				sections.push(slideIndex);
 			}
 			
+			// event handler for updating current slide index and current nav button
 			controller.onBlockChange(function() {
 				// get slide index
 				currIndex = controller.blockIndex;
@@ -85,10 +87,21 @@
 					scrollToSlide(slides.eq(currIndex));
 				}
 			});
+			
+			// if slides are images, assign height to auto for proportional scaling
+			for (i=0; i<slides.length; i++) {
+				var el = slides.eq(i);
+				if (el.prop('tagName').toUpperCase() === 'IMG') {
+					el.css('height','auto');	
+				}
+			}
 		};
+		
+		
 		
 		function scrollToSlide(slide) {
 			console.log('offset '+scrolldeck.settings.offset);
+			console.log(scrolldeck.settings.offset);
 			$(window)._scrollable().stop();
 			$(window).scrollTo(slide, {
 				duration: scrolldeck.settings.duration,
