@@ -70,6 +70,7 @@ h2{
 	list-style: none;
 	position: fixed;
 	right: 20px;
+	z-index: 999;
 }
 
 #nav li{
@@ -132,6 +133,10 @@ h2{
 	padding: 100px 0 0 0;
 	position: relative;
 	width: 350px;	
+}
+
+.slide {
+	width: 100%;
 }
 
 #nav li a {

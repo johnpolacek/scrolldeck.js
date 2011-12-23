@@ -49,21 +49,9 @@
 			controller.onBlockChange(function() {
 				// get slide index
 				currIndex = controller.blockIndex;
-				console.log('scrollorama index '+currIndex);
 				
-				// update nav
-				if (buttons) {
-					buttons.removeClass('current');
-					var currSection = -1;
-					for (i=0; i<sections.length;i++) {
-						if (currIndex >= sections[i]) {
-							currSection = i;
-						}
-					}
-					if (currSection != -1) {
-						buttons.eq(currSection).addClass('current');	
-					}
-				}
+				// then update nav
+				updateNav();
 			});
 			
 			// Nav button click event
@@ -95,13 +83,32 @@
 					el.css('height','auto');	
 				}
 			}
+			
+			// if last slide is shorter than height of window, increase height
+			var lastSlide = slides.eq(slides.length-1);
+			if (lastSlide.height() < $(window).height()) {
+				lastSlide.css('height', $(window).height());
+			}
+			
+			updateNav();
 		};
 		
-		
+		function updateNav() {
+			if (buttons) {
+				buttons.removeClass('current');
+				var currSection = -1;
+				for (i=0; i<sections.length;i++) {
+					if (currIndex >= sections[i]) {
+						currSection = i;
+					}
+				}
+				if (currSection != -1) {
+					buttons.eq(currSection).addClass('current');	
+				}
+			}
+		}
 		
 		function scrollToSlide(slide) {
-			console.log('offset '+scrolldeck.settings.offset);
-			console.log(scrolldeck.settings.offset);
 			$(window)._scrollable().stop();
 			$(window).scrollTo(slide, {
 				duration: scrolldeck.settings.duration,
