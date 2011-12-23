@@ -105,17 +105,17 @@ code {
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	opacity: .6;
 }
 
 /*----------------------------------------  SLIDES  */
 
 .slide {
-	position: relative;
 	margin: 0;
 	width: 100%;
-	padding: 150px 0;
-	padding: 15rem 0;
-	height: 80rem;
+	padding: 120px 0;
+	padding: 12rem 0;
+	height: 40rem;
 }
 
 #title {
@@ -139,8 +139,11 @@ code {
 }
 
 #credits {
-	padding-top: 80px;
-	padding-top: 8rem;
+	line-height: .8;
+}
+
+#credits a {
+	padding-right: 3px;
 }
 
 /*------------------------  BASE-REM SIZING  */

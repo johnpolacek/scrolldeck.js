@@ -13,6 +13,7 @@
 			buttons,
 			slides,
 			sections,
+			controller,
 			i;
 		
 		var defaults = {
@@ -36,21 +37,18 @@
 			slides = $(scrolldeck.settings.slides);
 			currIndex = 0;
 			sections = [];
+			controller = $.scrollorama({blocks:slides});
 			
 			for (i=0; i<buttons.length;i++) {
 				var slideIndex = slides.index($($(buttons[i]).attr('href')));
 				sections.push(slideIndex);
 			}
 			
-			slides.waypoint(function(e, dir) {
+			controller.onBlockChange(function() {
 				// get slide index
-				currIndex = slides.index(this);
-				if (dir == 'up' && currIndex > 1) {
-					currIndex --;
-				}
-				if (currIndex < 0) {
-					currIndex = 0;
-				}
+				currIndex = controller.blockIndex;
+				console.log('scrollorama index '+currIndex);
+				
 				// update nav
 				if (buttons) {
 					buttons.removeClass('current');
@@ -64,7 +62,7 @@
 						buttons.eq(currSection).addClass('current');	
 					}
 				}
-			}, {offset:-scrolldeck.settings.offset});
+			});
 			
 			// Nav button click event
 			buttons.click(function(e) {
@@ -90,6 +88,7 @@
 		};
 		
 		function scrollToSlide(slide) {
+			console.log('offset '+scrolldeck.settings.offset);
 			$(window)._scrollable().stop();
 			$(window).scrollTo(slide, {
 				duration: scrolldeck.settings.duration,

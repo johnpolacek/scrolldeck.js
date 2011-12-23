@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	
 	<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollorama.js"></script>
 	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/jquery.scrolldeck.js"></script>
@@ -26,19 +26,18 @@
 	</div>
 
 	<div class="slide">
-		<div class="container" id="intro">
-			<h1 id="title">scrolldeck</h1>
-			<p id="author">created by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
-			<p>A jQuery plugin for making vertically scrolling presentation decks</p>
-			<p>You can use it to make slides with <a href="decks/responsive">HTML/CSS</a>, <br />or <a href="decks/infographics">fullscreen images</a>, or even using a <a href="decks/parallax">parallax effect</a></p>  
-			<p>
-				<small>
-					Download: 
-					<a class="download" href="https://github.com/johnpolacek/ResponsiveThumbnailGallery/zipball/master">zip</a>
-					<a class="download" href="https://github.com/johnpolacek/ResponsiveThumbnailGallery/tarball/master">tar</a>
-				</small>
-			</p>
-		</div>
+		<h1 id="title">scrolldeck</h1>
+		<p id="author">created by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
+		<p>A jQuery plugin for making vertically scrolling presentation decks</p>
+		<p>You can use it to make slides with <a href="decks/responsive">HTML/CSS</a>, <br />or <a href="decks/infographics">fullscreen images</a>, or even using a <a href="decks/parallax">parallax effect</a></p>  
+		<p>Powered by <a href="http://johnpolacek.github.com/scrollorama">scrollorama.js</a></p>
+		<p>
+			<small>
+				Download: 
+				<a class="download" href="https://github.com/johnpolacek/ResponsiveThumbnailGallery/zipball/master">zip</a>
+				<a class="download" href="https://github.com/johnpolacek/ResponsiveThumbnailGallery/tarball/master">tar</a>
+			</small>
+		</p>
 	</div>
 	
 	<div class="slide" id="howtouse">
@@ -84,16 +83,14 @@ $(document).ready(function() {
 	
 	<div class="slide" id="credits">
 		<h1>Credits</h1>
-		<p>scrolldeck.js by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
-		<p><a href="http://imakewebthings.github.com/jquery-waypoints/">jQuery Waypoints</a> by <a href="http://imakewebthings.com">Caleb Troughton</a></p>
+		<p>scrolldeck.js &amp; <a href="http://johnpolacek.github.com/scrollorama">scrollorama.js</a> by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
 		<p><a href="http://demos.flesler.com/jquery/scrollTo/">jQuery ScrollTo</a> by <a href="https://twitter.com/#!/flesler">Ariel Flesler</a></p>
-		<p><a href="https://github.com/cameronmcefee/plax">jQuery Parallax Plugin</a> by <a href="http://www.cameronmcefee.com">Cameron McEfee</a></p>
 		<br />
-		<p>Other cool slide deck js libraries:<br />
+		<p><small>Inspired by other cool slide deck js libraries:<br />
 			<a href="http://dressrush.com/blog/post/12506021124/dressrush-online-pitch-deck">Pitch Deck</a>,
 			<a href="http://imakewebthings.github.com/deck.js/">deck.js</a> and
 			<a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>
-		</p>
+		</small></p>
 	</div>
 	
 	<img src="img/resize.png" id="resize-graphic" />
