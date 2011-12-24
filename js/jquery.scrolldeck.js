@@ -8,11 +8,14 @@
 (function($) {
     $.scrolldeck = function(options) {
 		
-		// PRIVATE VARS
-		var currIndex,
+		
+		// VARS
+		
+		var currIndex = 0,
 			buttons,
 			slides,
-			sections,
+			scrollpoints = [],
+			sections = [],
 			controller,
 			i;
 		
@@ -23,6 +26,9 @@
 			easing: 'easeInOutExpo',
 			offset: 0
 		};
+		
+		
+		// INIT
 		
 		var scrolldeck = this;
 		scrolldeck.settings = {};
@@ -35,15 +41,15 @@
 			
 			buttons = $(scrolldeck.settings.buttons);
 			slides = $(scrolldeck.settings.slides);
-			currIndex = 0;
-			sections = [];
 			controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
 			
-			// if there are nav buttons, create array of section header slide indexes
-			for (i=0; i<buttons.length;i++) {
-				var slideIndex = slides.index($($(buttons[i]).attr('href')));
-				sections.push(slideIndex);
-			}
+			// set slide and animation scrollpoints
+			for (i=0; i<slides.length; i++)  		scrollpoints.push(slides.eq(i).offset().top);
+			for (i=0; i<$('.animate').length; i++)	scrollpoints.push($('.animate').eq(i).offset().top);
+			scrollpoints.sort(function(a,b){return a - b});
+			
+			// if nav buttons, create array of section header slide indexes
+			for (i=0; i<buttons.length;i++) 		sections.push(slides.index($($(buttons[i]).attr('href'))));
 			
 			// event handler for updating current slide index and current nav button
 			controller.onBlockChange(function() {
@@ -66,13 +72,11 @@
 			$(document).keydown(function(e){
 				// left arrow = scroll up
 				if ((e.keyCode == 37) && currIndex !== 0) {
-					currIndex--;
-					scrollToSlide(slides.eq(currIndex));
+					scrollToSlide(getPrevScrollpoint());
 				}
 				// right arrow = scroll down
 				else if ((e.keyCode == 39 || e.keyCode == 32) && currIndex != slides.length-1) { 
-					currIndex++;
-					scrollToSlide(slides.eq(currIndex));
+					scrollToSlide(getNextScrollpoint());
 				}
 			});
 			
@@ -92,6 +96,10 @@
 			
 			updateNav();
 		};
+		
+		
+		
+		// PRIVATE FUNCTIONS
 		
 		function updateNav() {
 			if (buttons) {
@@ -115,6 +123,22 @@
 				easing: scrolldeck.settings.easing,
 				offset: scrolldeck.settings.offset
 			});
+		}
+		
+		function getNextScrollpoint() {
+			return getScrollpoint(2);
+		}
+		
+		function getPrevScrollpoint() {
+			return getScrollpoint(-1);
+		}
+		
+		function getScrollpoint(n) {
+			var scrollTop = $(window).scrollTop();
+			var points = scrollpoints.slice(0);
+			points.push(scrollTop);
+			points.sort(function(a,b){return a - b});
+			return points[points.indexOf(scrollTop)+n]
 		}
 		
 		
