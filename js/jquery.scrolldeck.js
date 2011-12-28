@@ -17,6 +17,7 @@
 			scrollpoints = [],
 			sections = [],
 			controller,
+			windowHeight = $(window).height(),
 			i;
 		
 		var defaults = {
@@ -43,10 +44,60 @@
 			slides = $(scrolldeck.settings.slides);
 			controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
 			
+			// add animations with scrollorama
+			
+			// ANIMATE INS
+			for (i=0; i<$('.animate-in').length; i++) {
+				var anim = $('.animate-in').eq(i);
+				switch (anim.attr('data-animation')) {
+					case 'fly-in-left':
+						anim
+							.css('display','block')
+							.parent().css('overflow','hidden');
+						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'left', start:-1200 });
+						break;
+					case 'fly-in-right':
+						anim
+							.css('display','block')
+							.parent().css('overflow','hidden');
+						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'right', start:-1200 });
+						break;
+					case 'space-in':
+						controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'letter-spacing', start:40 });
+						controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'opacity', start:0 });
+						break;
+					default:
+						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
+				}
+			}
+			
+			// ANIMATE BUILDS
+			for (i=0; i<$('.animate-build').length; i++) {
+				var anim = $('.animate-build').eq(i);
+				switch (anim.attr('data-animation')) {
+					case 'fly-in-left':
+						anim
+							.css('display','block')
+							.parent().css('overflow','hidden');
+						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'left', start:-1200, pin:true });
+						break;
+					case 'fly-in-right':
+						anim
+							.css('display','block')
+							.parent().css('overflow','hidden');
+						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'right', start:-1200, pin:true });
+						break;
+					case 'space-in':
+						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'letter-spacing', start:40, pin:true });
+						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
+						break;
+					default:
+						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
+				}
+			}
+			
 			// set slide and animation scrollpoints
-			for (i=0; i<slides.length; i++)  		scrollpoints.push(slides.eq(i).offset().top);
-			for (i=0; i<$('.animate').length; i++)	scrollpoints.push($('.animate').eq(i).offset().top);
-			scrollpoints.sort(function(a,b){return a - b});
+			scrollpoints = controller.getScrollpoints();
 			
 			// if nav buttons, create array of section header slide indexes
 			for (i=0; i<buttons.length;i++) 		sections.push(slides.index($($(buttons[i]).attr('href'))));
@@ -135,8 +186,11 @@
 		
 		function getScrollpoint(n) {
 			var scrollTop = $(window).scrollTop();
+			// make temp dup scrollpoints array
 			var points = scrollpoints.slice(0);
+			// add current scroll position to new temp array
 			points.push(scrollTop);
+			// do sort to find nearest scrollpoint
 			points.sort(function(a,b){return a - b});
 			return points[points.indexOf(scrollTop)+n]
 		}

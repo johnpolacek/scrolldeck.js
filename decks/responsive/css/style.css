@@ -176,7 +176,7 @@ img {
 	padding-top: 10px;
 	padding-top: 1rem;
 	font-style: italic;
-	color: #999;
+	color: #666;
 }
 
 #why2 h1 {
@@ -248,7 +248,7 @@ img {
 
 #how1 small {
 	display: block;
-	color: #999;
+	color: #666;
 	font-style: italic;
 	width: 82%;
 	text-align: right;
