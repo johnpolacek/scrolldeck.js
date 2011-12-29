@@ -45,7 +45,9 @@ p, li {
 a, a:visited {
 	font-weight: 400;
 	font-style: italic;
-	color: #999;
+	color: #666;
+	padding-right: 3px;
+	padding-right: .3rem;
 }
 
 li {
@@ -115,6 +117,10 @@ img {
 	text-align: center;
 }
 
+.or-block {
+	display: block;
+}
+
 #what1 {
 	padding: 150px 0 200px;
 	padding: 15rem 0 20rem;
@@ -166,13 +172,18 @@ img {
 }
 
 #what5 {
-	padding: 150px 0 200px;
-	padding: 15rem 0 20rem;
+	padding: 180px 0 200px;
+	padding: 18rem 0 20rem;
 }
 
 #what5 h2 {
 	font-size: 60px;
 	font-size: 6rem;
+	margin: 0;
+}
+
+#what5 p {
+	margin: 0;
 }
 
 #why1 {
@@ -190,9 +201,12 @@ img {
 	color: #666;
 }
 
-#why2 h1 {
-	margin: 0;
-	padding: 3rem 0;
+#why2 h2 {
+	margin: 10px;
+	margin: 1rem;
+	font-size: 36px;
+	font-size: 3.6rem;
+	font-style: italic;
 }
 
 #why2 p {

@@ -52,13 +52,11 @@
 				switch (anim.attr('data-animation')) {
 					case 'fly-in-left':
 						anim
-							.css('display','block')
 							.parent().css('overflow','hidden');
 						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'left', start:-1200 });
 						break;
 					case 'fly-in-right':
 						anim
-							.css('display','block')
 							.parent().css('overflow','hidden');
 						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'right', start:-1200 });
 						break;
@@ -76,15 +74,11 @@
 				var anim = $('.animate-build').eq(i);
 				switch (anim.attr('data-animation')) {
 					case 'fly-in-left':
-						anim
-							.css('display','block')
-							.parent().css('overflow','hidden');
+						anim.parent().css('overflow','hidden');
 						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'left', start:-1200, pin:true });
 						break;
 					case 'fly-in-right':
-						anim
-							.css('display','block')
-							.parent().css('overflow','hidden');
+						anim.parent().css('overflow','hidden');
 						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'right', start:-1200, pin:true });
 						break;
 					case 'space-in':
@@ -141,8 +135,8 @@
 			
 			// if last slide is shorter than height of window, increase height
 			var lastSlide = slides.eq(slides.length-1);
-			if (lastSlide.height() < $(window).height()) {
-				lastSlide.css('height', $(window).height());
+			if (lastSlide.outerHeight() < $(window).height()) {				
+				lastSlide.css('padding-bottom', lastSlide.css('padding-bottom')+$(window).height()-lastSlide.outerHeight());
 			}
 			
 			updateNav();
