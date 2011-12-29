@@ -10,6 +10,16 @@ body {
 	line-height: 1.4;
 }
 
+
+.background {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: -moz-radial-gradient(50% 50%, farthest-side, #fff, #efefef);
+	background: -webkit-gradient(radial, 50% 50%, 250, 50% 50%, 750, from(#fff), to(#bbb));
+	z-index: 0;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -55,23 +65,24 @@ img {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	background: #eee;
+	background: #ccc;
+	border-bottom: solid 3px #bbb;
+	opacity: .6;
 }
 
 #header h1 {
 	margin: 0;
-	padding: 10px 20px 10px;
-	padding: 1rem 2rem 1rem;
+	padding: 7px 20px 10px;
+	padding: .7rem 2rem 1rem;
 	font-size: 16px;
 	font-size: 1.6rem;
-	color: #999;
+	color: #888;
 	font-weight: normal;
 }
 
 #nav {
 	position: absolute;
-	top: 3px;
-	top: .3rem;
+	top: 0;
 	right: 20px;
 	right: 2rem;
 }
@@ -81,7 +92,7 @@ img {
 	padding: 10px;
 	padding: 1rem;
 	text-decoration: none;
-	color: #999;
+	color: #888;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-style: normal;
@@ -379,7 +390,7 @@ img {
 }
 
 .img-border {
-	border: solid 1px #ddd;
+	border: solid 1px #aaa;
 }
 
 #img-responsive {
