@@ -63,6 +63,8 @@
 						scrolldeck.controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'letter-spacing', start:40 });
 						scrolldeck.controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'opacity', start:0 });
 						break;
+					case 'fade-in':
+						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
 					default:
 						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
 				}
@@ -84,6 +86,8 @@
 						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'letter-spacing', start:40, pin:true });
 						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 						break;
+					case 'fade-in':
+						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 					default:
 						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 				}

@@ -39,6 +39,7 @@ a, a:visited {
 }
 
 small {
+	line-height: 1;
 	font-style: italic;
 	font-size: 20px;
 	font-size: 2rem;
@@ -64,7 +65,7 @@ pre {
 
 blockquote {
 	text-align: left;
-	width: 50%;
+	width: 70%;
 	margin: 10px auto;
 	margin: 1rem auto;
 	background: #fff;
@@ -144,8 +145,8 @@ code {
 /*----------------------------------------  SLIDES  */
 
 .slide {
-	margin: 0;
-	width: 100%;
+	margin: 0 auto;
+	width: 99%;
 	padding: 120px 0;
 	padding: 12rem 0;
 	height: 40rem;
@@ -170,6 +171,13 @@ code {
 	position: relative;
 	top: 8px;
 	left: 4px;
+}
+
+#animations {
+	padding-top: 70px;
+	padding-top: 7rem;
+	height: 480px;
+	height: 48rem;
 }
 
 #examples h1 {

@@ -79,6 +79,23 @@ $(document).ready(function() {
 		</p>
 	</div>
 	
+	<div class="slide" id="animations">
+		<p>Add animations to slides by adding the <code>"animate-in"</code> <br />or <code>"animate-build"</code> classes to elements in your slides.</p>
+		<p><blockquote><pre>
+&lt;div class="slide"&gt;
+    &lt;p class="animate-in" data-animation="fly-in-left"&gt;This paragraph will fly in from the left.&lt;/p&gt;
+    &lt;p class="animate-in" data-animation="fly-in-right"&gt;This paragraph will fly in from the right.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="slide"&gt;
+    &lt;p&gt;This slide will get be &rsquo;pinned&lsquo; to the top of the screen until all the slide animation builds are complete.&lt;/p&gt;
+    &lt;p class="animate-build"&gt;This paragraph will fade in (the default animation)&lt;/p&gt;
+    &lt;p class="animate-build" data-animation="space-in"&gt;This paragraph will fade in while its letter spacing contracts to normal.&lt;/p&gt;
+&lt;/div&gt;
+</pre></blockquote></p>
+		<p><small>Available animations are <code>"fly-in-left"</code>, <code>"fly-in-right"</code>, <br /><code>"space-in"</code> and the default which is <code>"fade-in"</code></small></p>
+	</div>
+	
 	<div class="slide" id="examples">
 		<div class="container">
 			<h1>Examples</h1>
