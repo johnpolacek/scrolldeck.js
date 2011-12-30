@@ -1,10 +1,19 @@
+/*
+	COLORS
+ 
+	Dark Blue 			#222438
+	Medium Blue			#959db5
+	Light Blue	 		#c9d5e1
+	Dark Blue Links		#1a4a6a
+	
+*/
+
 body {
-	background: #fff;
 	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 	font-size: 30px;
 	font-size: 3rem;
 	text-align: center;
-	background-color: #ccc;
+	background-color: #c9d5e1;
 }
 
 h1 {
@@ -23,7 +32,7 @@ p {
 }
 
 a, a:visited {
-	color: #444;
+	color: #1a4a6a;
 	font-weight: bold;
 	font-style: italic;
 	text-shadow: none;
@@ -58,10 +67,12 @@ blockquote {
 	width: 50%;
 	margin: 10px auto;
 	margin: 1rem auto;
-	background: #eee;
-	border: solid 2px #bbb;
+	background: #fff;
+	border: solid 3px #959db5;
 	padding: 0 40px;
 	padding: 0 4rem;
+	border-radius: 6px;
+	border-radius: .6rem;
 }
 
 code {
@@ -78,10 +89,11 @@ code {
 	top: 0;
 	left: 0;
 	z-index: 10;
-	background: #555;
-	border-bottom: solid 3px #444;
+	background: #222438;
+	border-bottom: solid 3px #959db5;
 	padding: 5px;
 	padding: .5rem;
+	opacity: .9;
 }
 
 #instructions {
@@ -89,7 +101,7 @@ code {
 	top: 25px;
 	left: 40px;
 	background: #fff;
-	border: solid 3px #ccc;
+	border: solid 3px #959db5;
 	padding: 5px 10px;
 	text-transform: uppercase;
 	width: 180px;
@@ -97,6 +109,7 @@ code {
 	font-size: 14px;
 	font-weight: bold;
 	z-index: 99;
+	color: #222438
 }
 
 #powered {
@@ -108,7 +121,7 @@ code {
 	padding: 10px;
 	padding: 1rem;
 	text-decoration: none;
-	color: #ccc;
+	color: #959db5;
 	font-size: 20px;
 	font-size: 2rem;
 	text-shadow: 0 -1px 1px #000;

@@ -135,7 +135,7 @@
 			// if last slide is shorter than height of window, increase height
 			var lastSlide = slides.eq(slides.length-1);
 			if (lastSlide.outerHeight() < $(window).height()) {				
-				lastSlide.css('padding-bottom', lastSlide.css('padding-bottom')+$(window).height()-lastSlide.outerHeight());
+				lastSlide.height(lastSlide.height()+$(window).height()-lastSlide.outerHeight());
 			}
 			
 			updateNav();
