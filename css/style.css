@@ -123,7 +123,7 @@ code {
 }
 
 #author {
-	width: 70%;
+	width: 100%;
 	font-size: 20px;
 	font-size: 2rem;
 	margin: 0 auto;
@@ -131,6 +131,12 @@ code {
 	padding-bottom: 2rem;
 	text-align: right;
 	font-style: italic;
+}
+
+.twitter-follow-button {
+	position: relative;
+	top: 8px;
+	left: 4px;
 }
 
 #examples h1 {
