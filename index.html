@@ -26,15 +26,18 @@
 	</div>
 
 	<div class="slide">
+		<div id="instructions">
+			Use left/right arrow to change slides
+		</div>
 		<h1 id="title">scrolldeck</h1>
 		<p id="author">
 			created by <a href="http://twitter.com/johnpolacek">John Polacek</a>
 			<a href="https://twitter.com/johnpolacek" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @johnpolacek</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</p>
-		<p>A jQuery plugin for making vertically scrolling presentation decks</p>
-		<p>You can use it to make slides with <a href="decks/responsive">HTML/CSS</a>, <br />or <a href="decks/infographics">fullscreen images</a>, or even using a <a href="decks/parallax">parallax effect</a></p>  
-		<p>Powered by <a href="http://johnpolacek.github.com/scrollorama">scrollorama.js</a></p>
+		<p>A jQuery plugin for making scrolling presentation decks <br />
+		<small>For example: <a href="decks/responsive">animations</a>, <a href="decks/infographics">fullscreen images</a> or <a href="decks/parallax">parallaxing</a></small></p>  
+		<p id="powered"><small>Powered by <a href="http://johnpolacek.github.com/scrollorama">Scrollorama</a></small></p>
 		<p>
 			<small>
 				Download: 
@@ -72,22 +75,22 @@ $(document).ready(function() {
 	offset: 0
   });
 });</pre></blockquote></p>
-		<p><small class="pro-tip">Pro-Tip: To hide the scrollbar, set <code>html {overflow:hidden;}</code> in your css</small>
+		<p><small class="pro-tip">Pro-Tip: To hide the scrollbar, set <code>html{overflow:hidden;}</code> in your css</small>
 		</p>
 	</div>
 	
 	<div class="slide" id="examples">
 		<div class="container">
 			<h1>Examples</h1>
-			<p><a href="decks/responsive">What The Heck Is Responsive Web Design</a></p>
-			<p><a href="decks/infographics">Image Slides Example (Infographics Are Cool)</a></p>
-			<p><a href="decks/parallax">Parallax Example</a></p>
+			<p><a href="decks/responsive">Slide Animations Example</a><br /><small>(What The Heck Is Responsive Web Design)</small></p>
+			<p><a href="decks/infographics">Image Slides Example</a><br /><small>(Infographics Are Cool)</small></p>
+			<p><a href="decks/parallax">jQuery Parallax Plugin Example</a></p>
 		</div>
 	</div>
 	
 	<div class="slide" id="credits">
 		<h1>Credits</h1>
-		<p>scrolldeck.js &amp; <a href="http://johnpolacek.github.com/scrollorama">scrollorama.js</a> by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
+		<p>scrolldeck.js &amp; <a href="http://johnpolacek.github.com/scrollorama">Scrollorama</a> by <a href="http://twitter.com/johnpolacek">John Polacek</a></p>
 		<p><a href="http://demos.flesler.com/jquery/scrollTo/">jQuery ScrollTo</a> by <a href="https://twitter.com/#!/flesler">Ariel Flesler</a></p>
 		<br />
 		<p><small>Inspired by other cool slide deck js libraries:<br />
@@ -106,6 +109,10 @@ $(document).ready(function() {
 				buttons: '.nav-button',
 				easing: 'easeInOutExpo'
 			});
+			
+			// add other animations using the scrolldeck.controller (see Scrollorama plugin)
+			console.log(deck.controller);
+			deck.controller.animate('#instructions',{ duration: 100, property:'opacity', end: 0 });
 		  
 	  });
 	</script>

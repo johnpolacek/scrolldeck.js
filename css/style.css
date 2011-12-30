@@ -84,6 +84,26 @@ code {
 	padding: .5rem;
 }
 
+#instructions {
+	position: fixed;
+	top: 25px;
+	left: 40px;
+	background: #fff;
+	border: solid 3px #ccc;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	width: 180px;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	z-index: 99;
+}
+
+#powered {
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
 .nav-button {
 	padding: 10px;
 	padding: 1rem;
@@ -144,8 +164,12 @@ code {
 	padding-bottom: 2rem;
 }
 
-#credits {
+#examples, #examples p, #credits {
 	line-height: .8;
+}
+
+#examples p {
+	padding-top: 20px;
 }
 
 #credits a {

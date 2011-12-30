@@ -16,7 +16,6 @@
 			slides,
 			scrollpoints = [],
 			sections = [],
-			controller,
 			windowHeight = $(window).height(),
 			i;
 		
@@ -42,7 +41,7 @@
 			
 			buttons = $(scrolldeck.settings.buttons);
 			slides = $(scrolldeck.settings.slides);
-			controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
+			scrolldeck.controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
 			
 			// add animations with scrollorama
 			
@@ -53,19 +52,19 @@
 					case 'fly-in-left':
 						anim
 							.parent().css('overflow','hidden');
-						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'left', start:-1200 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'left', start:-1200 });
 						break;
 					case 'fly-in-right':
 						anim
 							.parent().css('overflow','hidden');
-						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'right', start:-1200 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'right', start:-1200 });
 						break;
 					case 'space-in':
-						controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'letter-spacing', start:40 });
-						controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'opacity', start:0 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'letter-spacing', start:40 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'opacity', start:0 });
 						break;
 					default:
-						controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
 				}
 			}
 			
@@ -75,31 +74,31 @@
 				switch (anim.attr('data-animation')) {
 					case 'fly-in-left':
 						anim.parent().css('overflow','hidden');
-						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'left', start:-1200, pin:true });
+						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'left', start:-1200, pin:true });
 						break;
 					case 'fly-in-right':
 						anim.parent().css('overflow','hidden');
-						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'right', start:-1200, pin:true });
+						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'right', start:-1200, pin:true });
 						break;
 					case 'space-in':
-						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'letter-spacing', start:40, pin:true });
-						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
+						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'letter-spacing', start:40, pin:true });
+						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 						break;
 					default:
-						controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
+						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 				}
 			}
 			
 			// set slide and animation scrollpoints
-			scrollpoints = controller.getScrollpoints();
+			scrollpoints = scrolldeck.controller.getScrollpoints();
 			
 			// if nav buttons, create array of section header slide indexes
 			for (i=0; i<buttons.length;i++) 		sections.push(slides.index($($(buttons[i]).attr('href'))));
 			
 			// event handler for updating current slide index and current nav button
-			controller.onBlockChange(function() {
+			scrolldeck.controller.onBlockChange(function() {
 				// get slide index
-				currIndex = controller.blockIndex;
+				currIndex = scrolldeck.controller.blockIndex;
 				
 				// then update nav
 				updateNav();
