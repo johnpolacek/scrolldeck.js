@@ -59,6 +59,7 @@ img {
 	width: 100%;
 }
 
+
 /*----------------------------------------  HEADER  */
 
 #header {
@@ -395,8 +396,7 @@ img {
 
 .img-inline {
 	display: inline-block;
-	padding: 12px 3px;
-	padding: 1.2rem .3rem;
+	
 }
 
 .img-link {
