@@ -70,7 +70,11 @@ img {
 	z-index: 10;
 	background: #ccc;
 	border-bottom: solid 3px #bbb;
-	opacity: .6;
+	opacity: .3;
+}
+
+#header:hover {
+	opacity: .5;
 }
 
 #header h1 {
