@@ -1,5 +1,5 @@
 /*
-	scrolldeck - jQuery scrolldeck to create a vertically scrolling presentation deck 
+	scrolldeck - jQuery scrolldeck to create a vertically scrolling presentation deck
 	by John Polacek (@johnpolacek)
 	
 	Dual licensed under MIT and GPL.
@@ -44,10 +44,10 @@
 			scrolldeck.controller = $.scrollorama({blocks:slides, offset:scrolldeck.settings.offset});
 			
 			// add animations with scrollorama
-			
+			var anim;
 			// ANIMATE INS
 			for (i=0; i<$('.animate-in').length; i++) {
-				var anim = $('.animate-in').eq(i);
+				anim = $('.animate-in').eq(i);
 				switch (anim.attr('data-animation')) {
 					case 'fly-in-left':
 						anim
@@ -60,11 +60,12 @@
 						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'right', start:-1200 });
 						break;
 					case 'space-in':
-						scrolldeck.controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'letter-spacing', start:40 });
-						scrolldeck.controller.animate(anim, { delay: windowHeight*.8, duration: windowHeight*.2, property:'opacity', start:0 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight*0.8, duration: windowHeight*0.2, property:'letter-spacing', start:40 });
+						scrolldeck.controller.animate(anim, { delay: windowHeight*0.8, duration: windowHeight*0.2, property:'opacity', start:0 });
 						break;
 					case 'fade-in':
 						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
+						break;
 					default:
 						scrolldeck.controller.animate(anim, { delay: windowHeight/2, duration: windowHeight/2, property:'opacity', start:0 });
 				}
@@ -72,7 +73,7 @@
 			
 			// ANIMATE BUILDS
 			for (i=0; i<$('.animate-build').length; i++) {
-				var anim = $('.animate-build').eq(i);
+				anim = $('.animate-build').eq(i);
 				switch (anim.attr('data-animation')) {
 					case 'fly-in-left':
 						anim.parent().css('overflow','hidden');
@@ -88,6 +89,7 @@
 						break;
 					case 'fade-in':
 						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
+						break;
 					default:
 						scrolldeck.controller.animate(anim, { delay: (anim.attr('data-build')-1)*400, duration: 400, property:'opacity', start:0, pin:true });
 				}
@@ -97,7 +99,8 @@
 			scrollpoints = scrolldeck.controller.getScrollpoints();
 			
 			// if nav buttons, create array of section header slide indexes
-			for (i=0; i<buttons.length;i++) 		sections.push(slides.index($($(buttons[i]).attr('href'))));
+			for (i=0; i<buttons.length;i++)
+				sections.push(slides.index($($(buttons[i]).attr('href'))));
 			
 			// event handler for updating current slide index and current nav button
 			scrolldeck.controller.onBlockChange(function() {
@@ -118,12 +121,12 @@
 			
 			// Keyboard events
 			$(document).keydown(function(e){
-				// left arrow = scroll up
-				if ((e.keyCode == 37) && currIndex !== 0) {
+				// up/left arrow = scroll up
+				if ((e.keyCode == 37 || e.keyCode == 38) && currIndex !== 0) {
 					scrollToSlide(getPrevScrollpoint());
 				}
-				// right arrow = scroll down
-				else if ((e.keyCode == 39 || e.keyCode == 32) && currIndex != slides.length-1) { 
+				// down/right arrow, space = scroll down
+				else if ((e.keyCode == 39 || e.keyCode == 32 || e.keyCode == 40) && currIndex != slides.length-1) {
 					scrollToSlide(getNextScrollpoint());
 				}
 			});
@@ -132,13 +135,13 @@
 			for (i=0; i<slides.length; i++) {
 				var el = slides.eq(i);
 				if (el.prop('tagName').toUpperCase() === 'IMG') {
-					el.css('height','auto');	
+					el.css('height','auto');
 				}
 			}
 			
 			// if last slide is shorter than height of window, increase height
 			var lastSlide = slides.eq(slides.length-1);
-			if (lastSlide.outerHeight() < $(window).height()) {				
+			if (lastSlide.outerHeight() < $(window).height()) {
 				lastSlide.height(lastSlide.height()+$(window).height()-lastSlide.outerHeight());
 			}
 			
@@ -159,7 +162,7 @@
 					}
 				}
 				if (currSection != -1) {
-					buttons.eq(currSection).addClass('current');	
+					buttons.eq(currSection).addClass('current');
 				}
 			}
 		}
@@ -188,8 +191,8 @@
 			// add current scroll position to new temp array
 			points.push(scrollTop);
 			// do sort to find nearest scrollpoint
-			points.sort(function(a,b){return a - b});
-			return points[points.indexOf(scrollTop)+n]
+			points.sort(function(a,b){return a - b;});
+			return points[points.indexOf(scrollTop)+n];
 		}
 		
 		
