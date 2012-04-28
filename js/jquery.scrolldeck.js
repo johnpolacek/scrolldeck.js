@@ -35,8 +35,6 @@
 			
 		var init = function() {
 			
-			$('html, body').animate({ scrollTop: 0 });
-			
 			scrolldeck.settings = $.extend({}, defaults, options);
 			
 			buttons = $(scrolldeck.settings.buttons);
