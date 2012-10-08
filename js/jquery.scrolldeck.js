@@ -110,7 +110,7 @@
 			});
 			
 			// Nav button click event
-			buttons.click(function(e) {
+			buttons.on('click', function(e) {
 				e.preventDefault();
 				var slide = $($(this).attr('href'));
 				currIndex = slide.index();
@@ -118,7 +118,7 @@
 			});
 			
 			// Keyboard events
-			$(document).keydown(function(e){
+			$(document).on('keydown', function(e){
 				// up/left arrow = scroll up
 				if ((e.keyCode == 37 || e.keyCode == 38) && currIndex !== 0) {
 					scrollToSlide(getPrevScrollpoint());
