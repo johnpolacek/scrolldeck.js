@@ -200,7 +200,7 @@ code {
 /*------------------------  BASE-REM SIZING  */
 
 
-@media (min-width: 1520px) {
+@media (min-width: 1401px) {
 	html {
 		font-size: 12px;
 	}
