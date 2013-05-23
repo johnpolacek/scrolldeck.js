@@ -121,10 +121,12 @@
 			$(document).on('keydown', function(e){
 				// up/left arrow = scroll up
 				if ((e.keyCode == 37 || e.keyCode == 38) && currIndex !== 0) {
+					e.preventDefault();
 					scrollToSlide(getPrevScrollpoint());
 				}
 				// down/right arrow, space = scroll down
 				else if ((e.keyCode == 39 || e.keyCode == 32 || e.keyCode == 40) && currIndex != slides.length-1) {
+					e.preventDefault();
 					scrollToSlide(getNextScrollpoint());
 				}
 			});
