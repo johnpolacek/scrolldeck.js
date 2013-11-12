@@ -127,8 +127,13 @@ img {
 }
 
 #what1 {
-	padding: 150px 0 200px;
-	padding: 15rem 0 20rem;
+	padding: 80px 0 200px;
+	padding: 8rem 0 20rem;
+}
+
+#what1 p {
+	font-size: 20px;
+	font-size: 2rem;
 }
 
 #what2 {
