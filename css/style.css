@@ -156,15 +156,9 @@ code {
 	line-height: .8;
 }
 
-#author {
-	width: 75%;
-	font-size: 20px;
-	font-size: 2rem;
-	margin: 0 auto;
-	padding-bottom: 20px;
-	padding-bottom: 2rem;
-	text-align: right;
-	font-style: italic;
+#landing {
+	padding: 90px 0;
+	padding: 9rem 0;
 }
 
 .twitter-follow-button {
