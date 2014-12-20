@@ -99,9 +99,7 @@ li {
 	padding: 10rem 0 20rem;
 	text-align: center;
 }
-.or-block {
-	display: block;
-}
+.or-block {display:block;}
 #what1 {
 	padding: 80px 0 200px;
 	padding: 8rem 0 20rem;
@@ -326,75 +324,30 @@ li {
 	font-size: 18px;
 	font-size: 1.8rem;
 }
-/* IMAGES */
-/* width % is width of img / 1280 px (target screen width) */
+/* IMAGES - width % is width of img / 1280 px (target screen width) */
 img {width: 100%;}
-.img-wrap {
-	margin: 0 auto;
-}
-.img-inline {
-	display: inline-block;
-	
-}
-.img-link {
-	text-decoration: none;
-}
-.img-border {
-	border: solid 1px #aaa;
-}
-#img-responsive {
-	width: 50.47%;
-}
-#img-devices {
-	width: 67.03%;
-}
-#img-bg-s {
-	width: 13.83%;
-}
-#img-bg-m {
-	width: 28.59%;
-}
-#img-bg-l {
-	width: 45.31%;
-}
-#img-illy-s {
-	width: 15%;
-}
-#img-illy-l {
-	width: 46.09%;
-}
-#img-clean-s {
-	width: 15%;
-}
-#img-clean-m {
-	width: 31.01%;
-}
-#img-clean-l {
-	width: 40.08%;
-}
-#img-sas-s {
-	width: 16.95%;
-}
-#img-sas-l {
-	width: 48.44%;
-}
-#img-obama-s {
-	width: 12.66%;
-}
-#img-obama-m {
-	width: 30.39%;
-}
-#img-obama-l {
-	width: 36.8%;
-}
+.img-wrap {margin: 0 auto;}
+.img-inline {display: inline-block;}
+.img-link {text-decoration: none;}
+.img-border {border: solid 1px #aaa;}
+#img-responsive {width: 50.47%;}
+#img-devices {width: 67.03%;}
+#img-bg-s {width: 13.83%;}
+#img-bg-m {width: 28.59%;}
+#img-bg-l {width: 45.31%;}
+#img-illy-s {width: 15%;}
+#img-illy-l {width: 46.09%;}
+#img-clean-s {width: 15%;}
+#img-clean-m {width: 31.01%;}
+#img-clean-l {width: 40.08%;}
+#img-sas-s {width: 16.95%;}
+#img-sas-l {width: 48.44%;}
+#img-obama-s {width: 12.66%;}
+#img-obama-m {width: 30.39%;}
+#img-obama-l {width: 36.8%;}
 /* width % is width of img / (40% of 1280 px) (containers are 40% of target screen width) */
-
-.where-block .img-wrap {
-	width: 22.66%;
-}
-#where3 .where-block .img-wrap {
-	width: 86.33%;
-}
+.where-block .img-wrap {width: 22.66%;}
+#where3 .where-block .img-wrap {width: 86.33%;}
 
 /* BASE-REM SIZING */
 @media (min-width: 1401px) {html {font-size: 12px;}}
