@@ -1,7 +1,5 @@
-html {
-	font-size: 10px;
-}
-
+/*! normalize.css 2011-08-31T22:02 UTC · http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block}[hidden],audio:not([controls]){display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}body,button,input,select,textarea{font-family:sans-serif}a{color:#00e}a:active,a:focus,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:after,q:before{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}ol,ul{margin:1em 0;padding:0 0 0 40px}dd{margin:0 0 0 40px}nav ol,nav ul{list-style:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure,form{margin:0}fieldset{margin:0 2px;padding:.35em .625em .75em}legend{border:0}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,html input[type=button],input[type=reset],input[type=submit]{cursor:pointer;-webkit-appearance:button}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+html {font-size:10px;}
 body {
 	background: #fff;
 	font-family: 'Corben', Helvetica, "Helvetica Neue", Arial, sans-serif;
@@ -9,8 +7,6 @@ body {
 	font-size: 2.4rem;
 	line-height: 1.4;
 }
-
-
 .background {
 	position: fixed;
 	height: 100%;
@@ -19,49 +15,37 @@ body {
 	background: -webkit-gradient(radial, 50% 50%, 250, 50% 50%, 750, from(#fff), to(#bbb));
 	z-index: 0;
 }
-
 ul {
 	list-style: none;
 	padding: 0;
 }
-
 h1 {
 	font-size: 60px;
 	font-size: 6rem;
 	padding: 0;
 }
-
 h2 {
 	font-size: 48px;
 	font-size: 4.8rem;
 }
-
-p, li {
+p,li {
 	font-weight: 400;
 	font-size: 36px;
 	font-size: 3.6rem;
 }
-
-a, a:visited {
+a,a:visited {
 	font-weight: 400;
 	font-style: italic;
 	color: #666;
 	padding-right: 3px;
 	padding-right: .3rem;
 }
-
 li {
 	padding: 4px 0;
 	padding: .4rem 0;
 }
 
-img {
-	width: 100%;
-}
-
-
-/*----------------------------------------  HEADER  */
-
+/* HEADER */
 #header {
 	width: 100%;
 	position: fixed;
@@ -72,11 +56,7 @@ img {
 	border-bottom: solid 3px #bbb;
 	opacity: .3;
 }
-
-#header:hover {
-	opacity: .5;
-}
-
+#header:hover {opacity: .5;}
 #header h1 {
 	margin: 0;
 	padding: 7px 20px 10px;
@@ -86,14 +66,12 @@ img {
 	color: #888;
 	font-weight: normal;
 }
-
 #nav {
 	position: absolute;
 	top: 0;
 	right: 20px;
 	right: 2rem;
 }
-
 .nav-button {
 	float: left;
 	padding: 10px;
@@ -104,18 +82,13 @@ img {
 	font-size: 1.6rem;
 	font-style: normal;
 }
+.current, a.nav-button:hover {color: #333;}
 
-.current, a.nav-button:hover {
-	color: #333;
-}
+.sponsor {margin:30px auto;margin:3rem auto;padding:0 3rem;}
+.sponsor img {width:auto;}
+.sponsor p {margin:5px auto;margin:.5rem auto;}
 
-.ad {
-	margin: 30px auto;
-	margin: 3rem auto;
-}
-
-/*------------------------  SLIDES  */
-
+/* SLIDES */
 .slide {
 	position: relative;
 	margin: 0;
@@ -126,26 +99,21 @@ img {
 	padding: 10rem 0 20rem;
 	text-align: center;
 }
-
 .or-block {
 	display: block;
 }
-
 #what1 {
 	padding: 80px 0 200px;
 	padding: 8rem 0 20rem;
 }
-
 #what1 p {
 	font-size: 20px;
 	font-size: 2rem;
 }
-
 #what2 {
 	padding: 150px 0 200px;
 	padding: 15rem 0 20rem;
 }
-
 #what2 strong {
 	display: block;
 	font-size: 60px;
@@ -157,17 +125,14 @@ img {
 	letter-spacing: 3px;
 	letter-spacing: .3rem;
 }
-
 #what3 {
 	padding: 120px 0 200px;
 	padding: 12rem 0 20rem;
 }
-
 #what4 h2 {
 	font-size: 36px;
 	font-size: 3.6rem;
 }
-
 #what4 strong {
 	display: block;
 	font-size: 60px;
@@ -175,7 +140,6 @@ img {
 	padding-top: 12px;
 	padding-top: 1.2rem;
 }
-
 #what4 small {
 	display: block;
 	font-size: 24px;
@@ -185,27 +149,22 @@ img {
 	padding-bottom: 24px;
 	padding-bottom: 2.4rem;
 }
-
 #what5 {
 	padding: 180px 0 200px;
 	padding: 18rem 0 20rem;
 }
-
 #what5 h2 {
 	font-size: 60px;
 	font-size: 6rem;
 	margin: 0;
 }
-
 #what5 p {
 	margin: 0;
 }
-
 #why1 {
 	padding: 100px 0 200px;
 	padding: 10rem 0 20rem;
 }
-
 #why1 small {
 	display: block;
 	width: 80%;
@@ -215,7 +174,6 @@ img {
 	font-style: italic;
 	color: #666;
 }
-
 #why2 h2 {
 	margin: 10px;
 	margin: 1rem;
@@ -223,69 +181,55 @@ img {
 	font-size: 3.6rem;
 	font-style: italic;
 }
-
 #why2 p {
 	margin: 0;
 	padding: 0;
 }
-
 #who1 {
 	padding: 200px 0 240px;
 	padding: 20rem 0 24rem;
 }
-
 #who1 h1 {
 	margin: 0;
 }
-
 #who1 p {
 	font-size: 30px;
 	font-size: 3rem;
 }
-
 .who {
 	padding: 150px 0 200px;
 	padding: 15rem 0 20rem;
 }
-
 .who p, .who h2 {
 	margin: 0;
 }
-
 .who h2 {
 	font-size: 30px;
 	font-size: 3rem;
 }
-
 .who p, .who a {
 	font-size: 20px;
 	font-size: 2rem;
 }
-
 #who7 {
 	padding: 270px 0 270px;
 	padding: 27rem 0 27rem;
 }
-
 #when1 {
 	padding: 80px 0 200px;
 	padding: 8rem 0 20rem;
 }
-
 #when1 h1, #when1 h2 {
 	margin: 12px;
 	margin: 1.2rem;
 }
-
 #when1 h2 {
 	font-size: 36px;
 	font-size: 3.6rem; 
 }
-
 #when1 ul  {
 	margin: 0;
 }
-
 #how1 small {
 	display: block;
 	color: #666;
@@ -295,20 +239,17 @@ img {
 	padding-top: 10px;
 	padding-top: 1rem;
 }
-
 #how2 h2 {
 	font-size: 36px;
 	font-size: 3.6rem;
 	line-height: 1;
 }
-
 #how2 strong {
 	display: block;
 	font-size: 60px;
 	font-size: 6rem;
 	padding-top: 2.4rem;
 }
-
 #how2 small {
 	display: block;
 	font-size: 24px;
@@ -318,23 +259,19 @@ img {
 	padding-bottom: 24px;
 	padding-bottom: 2.4rem;
 }
-
 #how3 {
 	padding-top: 5rem;
 }
-
 .where h2 {
 	font-size: 30px;
 	font-size: 3rem;
 	margin: 0;
 }
-
 .where h3, .where p, .where a {
 	margin: 0;
 	font-size: 20px;
 	font-size: 2rem;
 }
-
 .where-block {
 	vertical-align: top;
 	display: inline-block;
@@ -342,27 +279,22 @@ img {
 	padding: 20px 0;
 	padding: 2rem 0;
 }
-
 #where1 {
 	padding: 150px 0 200px;
 	padding: 15rem 0 20rem;
 }
-
 #where2 {
 	padding: 60px 0 200px;
 	padding: 6rem 0 20rem;
 }
-
 #where3 {
 	padding: 60px 0 200px;
 	padding: 6rem 0 20rem;
 }
-
 #where3 a {
 	font-size: 36px;
 	font-size: 3.6rem;
 }
-
 #where3 .where-block {
 	vertical-align: top;
 	display: inline-block;
@@ -371,12 +303,10 @@ img {
 	padding: 2.4rem 0 .6rem;
 	line-height: 1.2;
 }
-
 #where3 .where-block a {
 	font-size: 16px;
 	font-size: 1.6rem;
 }
-
 #where4 a {
 	display: block;
 	font-size: 24px;
@@ -384,179 +314,95 @@ img {
 	padding: 3px;
 	padding: .3rem;
 }
-
 #credits h3, #credits h4 {
 	margin: 2.4rem 0 .6rem;
 }
-
 #credits h4 {
 	font-size: 18px;
 	font-size: 1.8rem;
 }
-
 #credits p {
 	margin: 0;
 	font-size: 18px;
 	font-size: 1.8rem;
 }
-
-/*------------------------  IMAGES  */
-
-/* width % is width of img / 1280 px (target screen width)  */
-
+/* IMAGES */
+/* width % is width of img / 1280 px (target screen width) */
+img {width: 100%;}
 .img-wrap {
 	margin: 0 auto;
 }
-
 .img-inline {
 	display: inline-block;
 	
 }
-
 .img-link {
 	text-decoration: none;
 }
-
 .img-border {
 	border: solid 1px #aaa;
 }
-
 #img-responsive {
 	width: 50.47%;
 }
-
 #img-devices {
 	width: 67.03%;
 }
-
 #img-bg-s {
 	width: 13.83%;
 }
-
 #img-bg-m {
 	width: 28.59%;
 }
-
 #img-bg-l {
 	width: 45.31%;
 }
-
 #img-illy-s {
 	width: 15%;
 }
-
 #img-illy-l {
 	width: 46.09%;
 }
-
 #img-clean-s {
 	width: 15%;
 }
-
 #img-clean-m {
 	width: 31.01%;
 }
-
 #img-clean-l {
 	width: 40.08%;
 }
-
 #img-sas-s {
 	width: 16.95%;
 }
-
 #img-sas-l {
 	width: 48.44%;
 }
-
 #img-obama-s {
 	width: 12.66%;
 }
-
 #img-obama-m {
 	width: 30.39%;
 }
-
 #img-obama-l {
 	width: 36.8%;
 }
-
-/* width % is width of img / (40% of 1280 px) (containers are 40% of target screen width)  */
+/* width % is width of img / (40% of 1280 px) (containers are 40% of target screen width) */
 
 .where-block .img-wrap {
 	width: 22.66%;
 }
-
 #where3 .where-block .img-wrap {
 	width: 86.33%;
 }
 
-/*------------------------  BASE-REM SIZING  */
-
-
-@media (min-width: 1401px) {
-	html {
-		font-size: 12px;
-	}
-}
-
-@media (max-width: 1400px) {
-	html {
-		font-size: 11px;
-	}
-}
-
-/* target screen width  */
-@media (max-width: 1280px) {
-	html {
-		font-size: 10px;
-	}
-}
-	
-@media (max-width: 1160px) {
-	html {
-		font-size: 9px;
-	}
-}
-	
-@media (max-width: 1040px) {
-	html {
-		font-size: 8px;
-	}
-}
-	
-@media (max-width: 920px) {
-	html {
-		font-size: 7px;
-	}
-}
-	
-@media (max-width: 800px) {
-	html {
-		font-size: 6px;
-	}
-}
-	
-@media (max-width: 680px) {
-	html {
-		font-size: 5px;
-	}
-}
-	
-@media (max-width: 560px) {
-	html {
-		font-size: 4px;
-	}
-}
-	
-@media (max-width: 440px) {
-	html {
-		font-size: 3px;
-	}
-}
-
-@media (max-width: 320px) {
-	html {
-		font-size: 3px;
-	}
-}
+/* BASE-REM SIZING */
+@media (min-width: 1401px) {html {font-size: 12px;}}
+@media (max-width: 1400px) {html {font-size: 11px;}}
+/* target screen width */
+@media (max-width: 1280px) {html {font-size: 10px;}}
+@media (max-width: 1160px) {html {font-size: 9px;}}
+@media (max-width: 1040px) {html {font-size: 8px;}}
+@media (max-width: 800px) {html {font-size: 7px;}}
+@media (max-width: 640px) {html {font-size: 6px;}}
+@media (max-width: 420px) {html {font-size: 5px;}}
