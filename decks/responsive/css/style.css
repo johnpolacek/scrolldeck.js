@@ -84,11 +84,13 @@ li {
 }
 .current, a.nav-button:hover {color: #333;}
 
-.sponsor {margin:30px auto;margin:3rem auto;padding:0 3rem;}
-.sponsor img {width:auto;}
-.sponsor p {margin:5px auto;margin:.5rem auto;}
-#sponsor p {font-size:24px;font-size:2.4rem;margin:1rem auto;width:80%;}
-#sponsor h3 a {color:#222;font-weight: inherit;}
+#ad {
+	width:100%;
+	max-width:720px;
+	max-width:72rem;
+	margin: 60px auto 0;
+	margin: 6rem auto 0;
+}
 
 /* SLIDES */
 .slide {
