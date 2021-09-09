@@ -2,7 +2,7 @@
 
 A jQuery plugin for making scrolling presentation decks
 
-For more info, check out [the scrolldeck project page](http://johnpolacek.github.com/scrolldeck.js/)
+For more info, check out [the scrolldeck project page](http://johnpolacek.github.io/scrolldeck.js/)
 
 [Follow me on Twitter](http://twitter.com/johnpolacek)
 
